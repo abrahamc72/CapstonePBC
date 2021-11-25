@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<nav>
+    <ul>
+    
+        <H8>Testing Navigation</H8>
+      <li><a href="#CoachHome">HomeScreen</a></li>
+      <li><a href="#createTemplate1">TemplateCreate</a></li>
+      <li><a href="#createTemplate2">TemplateCreateAdditional</a></li>
+    </ul>
+  </nav>
+
+    <!-- Every new page is enclosed in a <section> -->
+    <!-- Move into a new page by adding to a button onclick="location.href = '#sectionID';" -->
+
+  <section id="CoachHome">
+        <div>
+            <img src="image/logotransparent.png" style="width:220px;height:auto;margin-left:115px;margin-top:50px"></img>
+        </div>
+        <div class="d-flex justify-content-center" >
+            <div>
+                <h4 style=margin-top:50px class="text-black">Weekly Sessions</h4>   
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center"style="margin-top:50px">
+            <button class="btn btn-lg btn-outline-primary btn-block" type="button" id=createSessionButton>Create Session</button>
+        </div>
+
+        <div class="d-flex justify-content-center"style="margin-top:50px">
+            <button class="btn btn-lg btn-outline-primary btn-block" type="button" id=createbutton>View Sessions</button>
+        </div>
+
+        <div class="d-flex justify-content-center" id="CoachingTemplate"style="margin-top:50px">
+            <h4 class="text-black">Coaching Templates</h4>
+        </div>
+
+        <div class="d-flex justify-content-center"style="margin-bottom:50px">
+            <button onclick="location.href = '#createTemplate1';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Create Template</button>
+        </div>
+  </section>
+
+
+
+
+  <section id="createTemplate1">
+    
+    <!--A simplepagebox is the grey box that all the content goes into-->
+    <!--If you want a different size box go to style.css and copy/paste the simple box section, change the name and change the values.-->
+    <div class="simplepagebox" style=margin:auto 0;>
+        <div class="d-flex justify-content-center">
+            <h4 style=margin-top:25px; class="text-black">Template Customization</h4>
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        <div class="container" style=margin-top:50px>
+                <div class="row" style=margin-left:100px;margin-right:100px>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Personal Alignment & Goals</h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Personal Alignment</h6>
+                        </div>
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Personal Goals</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col" style=max-width:50px>
+                        <div class="row" style=height:45px>
+                            <input style=margin-top:15px;align-items:center; class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        <div class="row"style=height:45px>
+                            <input style=margin-top:10px; class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                <div class="row" style=margin-top:50px;margin-left:100px;margin-right:100px>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Business Alignment & Goals </h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row">
+                            <h6 class="text-black">Business Alignment</h6>
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Business Goals</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Business SWOT</h6>
+                            
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Business Purpose</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Model, Product/Services and Customers</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col"style=max-width:50px>
+                        <div class="row" style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="BusinessAlignmentToggle">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="BusinessSWOTToggle">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="BusinessPurposeToggle">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="ModelToggle">
+                        </div>
+                        
+                    
+                    </div>
+
+
+                </div> 
+                <div class="row" style=margin-top:35px;margin-left:100px;margin-right:100px>
+            
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Thought Assessment </h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row">
+                            <h6 class="text-black">Thought Assessment</h6>
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Thought Assessment Outcomes</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Thought Assessment Profiles</h6>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col"style=max-width:50px>
+                        <div class="row" style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="BusinessAlignmentToggle">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  class="form-check-input" type="checkbox" value="" id="BusinessSWOTToggle">
+                        </div>
+                        </div>
+                    
+        
+                </div>
+
+                <div class="row" style=margin-left:100px;margin-right:100px;margin-top:50px;>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Business Financial Performance</h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Business Financial Performance</h6>
+                        </div>
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Business Funnel Performance</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col" style=max-width:50px>
+                        <div class="row" style=height:45px>
+                            <input style=margin-top:15px;align-items:center; class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        <div class="row"style=height:45px>
+                            <input style=margin-top:10px; class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:50px">
+                        <button onclick="location.href = '#createTemplate2';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Next</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <section id="createTemplate2">
+    <h1>
+      Section C
+    </h1>
+  </section>

@@ -1,0 +1,50 @@
+section {
+    display: none;
+  }
+  section:target {
+    display: block;
+  }
+
+
+#CoachHome {
+    border-radius: 6px;
+    justify-content: center;
+    max-width: 500px;
+    background: #eeeeee;
+    margin:0 auto;
+    box-shadow: -5px 5px #939597;
+    
+}
+
+.simplepagebox{
+
+    border-radius:6px;
+    justify-content:center;
+    max-width:1000px;
+    background: #eeeeee;
+    margin: 0 auto;
+    box-shadow: -5px 5px #939597;
+}
+
+.pagecontent
+{
+    justify-content: center;
+}
+
+.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited {
+    background-color: #3c9bf9 !important;
+    border-color:#3c9bf9 !important;
+    color:white !important;
+}
+
+.btn-outline-primary:hover{
+
+    background-color:#1e73be !important;
+}
+
+.row {
+    border: px solid;
+    border-radius: 3px;
+    border-color:#1e73be;
+}
+  

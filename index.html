@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script src = 'scripts/functions.js'></script>
 <nav>
     <ul>
@@ -30,7 +31,7 @@
         </div>
 
         <div class="d-flex justify-content-center"style="margin-top:50px">
-            <button class="btn btn-lg btn-outline-primary btn-block" type="button" id=createbutton>View Sessions</button>
+            <button onclick="location.href = '#viewSession1';"class="btn btn-lg btn-outline-primary btn-block" type="button" id=createbutton>View Sessions</button>
         </div>
 
         <div class="d-flex justify-content-center" id="CoachingTemplate"style="margin-top:50px">
@@ -664,7 +665,8 @@
                 
                 <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
                     <div class="d-flex justify-content-center"style="margin-bottom:15px">
-                        <button onclick="selectTemplate(1);" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Finish</button>
+                        <button onclick="location.href='#CoachHome';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                        <button onclick="selectTemplate(1);" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-left:10px"type="button" id=createbutton>Next</button>
                     </div>
                 </div>
                 
@@ -821,7 +823,74 @@
                 </div>
                 <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
                     <div class="d-flex justify-content-center"style="margin-bottom:50px">
-                        <button onclick="grabSelections1(); location.href = '#createSession4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Next</button>
+                        <button onclick="location.href='#createSession1';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                        <button onclick="grabSelections1(); location.href = '#createSession3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-left:10px"type="button" id=createbutton>Next</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+  </section>
+
+
+  <section id="createSession3" class="smallhome">
+    
+    <div class="simplepagebox" style="margin:auto 0">
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:500px;margin-top:25px>
+                <div class ="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Client Info</h4>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="d-flex justify-content-center" style=margin-top:100px>
+            <h6 style=margin-right:50px;margin-top:5px>
+                Session Date
+            </h6>
+            <div >
+                <input placeholder="DD-MM-YYYY" type="text" id="example" class="form-control">
+              </div> 
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            <h6 style=margin-right:50px;margin-top:5px>
+                Client Name
+            </h6>
+            <div >
+                <input placeholder="John Smith" type="text" id="example" class="form-control">
+                
+              </div> 
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            <h6 style=margin-right:20px;margin-top:5px>
+                Client Username
+            </h6>
+            <div >
+                <input placeholder="User" type="text" id="example" class="form-control">
+              </div> 
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            <h6 style=margin-right:50px;margin-top:5px>
+                Client Email
+            </h6>
+            <div >
+                <input placeholder="example@wordpress.com" type="text" id="example" class="form-control">
+              </div> 
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        
+                
+                <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:100px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                        <button onclick="location.href='#CoachHome';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                        <button onclick="selectTemplate(1);" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-left:10px"type="button" id=createbutton>Next</button>
                     </div>
                 </div>
                 
@@ -835,7 +904,71 @@
 
   </section>
 
+  <section id="viewSession1" class="smallhome">
+    
+    <div class="simplepagebox" style="margin:auto 0">
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:500px;margin-top:25px>
+                <div class ="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Create a session</h4>
+                </div>
+            </div>
+            
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:30px;>
+            <h6>
+                To Be Completed
+            </h6>
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>19-01-2021</option>
+                
+              </select> 
+   
+        </div>
+        <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+            <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                <button onclick="selectTemplate(1);" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:30px;margin-bottom:30px;margin-left:10px"type="button" id=createbutton>Next</button>
+            </div>
+        </div>
 
-  
+        <div class="d-flex justify-content-center" style=margin-top:0px;>
+            <h6>
+                Completed
+            </h6>
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>None</option>
+                
+              </select> 
+   
+        </div>
+        <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+            <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                <button onclick="viewTemplate();" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:30px;margin-bottom:30px;margin-left:10px"type="button" id=createbutton>Next</button>
+            </div>
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        
+                
+                <div class="d-flex justify-content-center" style=margin-left:30px;margin-top:0px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                        <button onclick="location.href='#CoachHome';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:30px;margin-bottom:10px;margin-right:10px"type="button" id=createbutton>Return Home</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+  </section>
 
   

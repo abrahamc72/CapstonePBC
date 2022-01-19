@@ -29,10 +29,13 @@ var baRowCount = new Array();
     baRowCount = [5,5,5,5];
 
 var TemplateName = "";
-var added = 0;
+var added = 1;
 
 var selTempName = "";
 
+var features = ["Finances","Health","Mindset","Knowledge","Relationships","Time"]
+var PATicks = [0,0,0,0,0,0]
+//window.location.href = "#CoachHome";
     //grab template selections
     function grabSelections1()
     {
@@ -276,5 +279,24 @@ var selTempName = "";
 
         }
 
+
+    }
+
+    function drawPARadar()
+    {
+        data=[];
+        for(i=0;i>5;i++)
+        {
+            
+        }
+
+        let svg = d3.select("body").append("svg")
+        .attr("width", 600)
+        .attr("height", 600);
+
+        let radialScale = d3.scaleLinear()
+        .domain([0,10])
+        .range([0,250]);
+        
 
     }

@@ -25,7 +25,15 @@ var paQuestionArray = new Array();
     paQuestionArray = ["x","x","x","x","x","x","x","x","x","x"];
     //0-10 - Questions for each section
 
+var baRowCount = new Array();
+    baRowCount = [5,5,5,5];
 
+var TemplateName = "";
+var added = 0;
+
+var selTempName = "";
+
+    //grab template selections
     function grabSelections1()
     {
 
@@ -49,6 +57,7 @@ var paQuestionArray = new Array();
 
     }
 
+    //add a row to Personal Alignment
     function addRowPA()
     {
         if(document.getElementById("PA5").hidden==true)
@@ -90,6 +99,7 @@ var paQuestionArray = new Array();
         
     }
 
+    //remove a row from Personal Alignment
     function removeRowPA()
     {
         if(document.getElementById("PA10").hidden==false)
@@ -130,6 +140,7 @@ var paQuestionArray = new Array();
         }
     }
 
+    //grab Personal Alignment answers
     function grabPASelections()
     {
         paQuestionArray = ["x","x","x","x","x","x","x","x","x","x"];
@@ -148,4 +159,122 @@ var paQuestionArray = new Array();
         }
         console.log(paRowCount);
         console.log(paSectionArray);
+    }
+
+    //add a row to Business Alignment
+    function BArem(n)
+    {
+        if(document.getElementById((n+"BA5")).hidden==false)
+        {
+            baRowCount[n-1] = baRowCount[n-1]-1;
+            document.getElementById(n+"BA5").hidden = true;
+            document.getElementById(n+"BA5").hidden = true;
+        }
+        else if(document.getElementById((n+"BA4")).hidden==false)
+        {
+            baRowCount[n-1] = baRowCount[n-1]-1;
+            document.getElementById(n+"BA4").hidden = true;
+            document.getElementById(n+"BA4").hidden = true;
+        }
+        else if(document.getElementById((n+"BA3")).hidden==false)
+        {
+            baRowCount[n-1] = baRowCount[n-1]-1;
+            document.getElementById(n+"BA3").hidden = true;
+            document.getElementById(n+"BA3").hidden = true;
+        }
+        else if(document.getElementById((n+"BA2")).hidden==false)
+        {
+            baRowCount[n-1] = 1;
+            document.getElementById(n+"BA2").hidden = true;
+            document.getElementById(n+"BA2").hidden = true;
+        }
+        
+        console.log(baRowCount);
+
+    }
+
+    //remove row BA
+    function BAadd(n)
+    {
+        if(document.getElementById((n+"BA2")).hidden==true)
+        {
+            baRowCount[n-1] = baRowCount[n-1]+1;
+            document.getElementById(n+"BA2").hidden = false;
+            document.getElementById(n+"BA2").hidden = false;
+        }
+        else if(document.getElementById((n+"BA3")).hidden==true)
+        {
+            baRowCount[n-1] = baRowCount[n-1]+1;
+            document.getElementById(n+"BA3").hidden = false;
+            document.getElementById(n+"BA3").hidden = false;
+        }
+        else if(document.getElementById((n+"BA4")).hidden==true)
+        {
+            baRowCount[n-1] = baRowCount[n-1]+1;
+            document.getElementById(n+"BA4").hidden = false;
+            document.getElementById(n+"BA4").hidden = false;
+        }
+        else if(document.getElementById((n+"BA4")).hidden==true)
+        {
+            baRowCount[n-1] = baRowCount[n-1]+1;
+            document.getElementById(n+"BA4").hidden = false;
+            document.getElementById(n+"BA4").hidden = false;
+        }
+        else if(document.getElementById((n+"BA5")).hidden==true)
+        {
+            baRowCount[n-1] = 5;
+            document.getElementById(n+"BA5").hidden = false;
+            document.getElementById(n+"BA5").hidden = false;
+        }
+        console.log(baRowCount);
+    }
+
+    function grabBASelections()
+    {
+
+
+
+
+    }
+
+    function createTemplate()
+    {
+        TemplateName = document.getElementById("tatempname").value;
+        added=0;
+    }
+
+    function listTemplate()
+    {
+        if(added==1)
+        {
+
+        }
+        else
+        {
+            document.getElementById("templateSelect").innerHTML += "<option>"+ TemplateName +"</option>";
+            added=1;
+        }
+        
+
+    }
+
+    function selectTemplate(n)
+    {
+        if(n==1)
+        {
+            selTempName = document.getElementById("templateSelect").value;
+            console.log(selTempName);
+
+            if(selTempName=="Quick Creation (No customization)")
+            {
+                window.location.href = "#createSession2";
+            }
+            else
+            {
+                window.location.hred = "#createSession4"
+            }
+
+        }
+
+
     }

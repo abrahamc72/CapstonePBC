@@ -26,7 +26,7 @@
         </div>
 
         <div class="d-flex justify-content-center"style="margin-top:50px">
-            <button class="btn btn-lg btn-outline-primary btn-block" type="button" id=createSessionButton>Create Session</button>
+            <button class="btn btn-lg btn-outline-primary btn-block" type="button" id=createSessionButton onclick="listTemplate(); location.href = '#createSession1';">Create Session</button>
         </div>
 
         <div class="d-flex justify-content-center"style="margin-top:50px">
@@ -354,54 +354,179 @@
                 </div>
             </div>
             
+            
         </div>
+        <div></div>
 
         <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
         <div class="container" style=margin-top:50px>
                 <div class = "d-flex justify-content-center">
                     <div class="d-flex justify-content-center">
-                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px>
+                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px;width:300px>
                             <div class ="d-flex justify-content-center">
-                                <h4 style=margin-top:20px; class="text-white">Purpose</h4>
+                                <h4  class="text-white">Purpose</h4>
                             </div>
                         </div>
                         
-                        
                     </div>
+                    
+                </div>
+                <div class="d-flex justify-content-center"style=margin-top:20px;>
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=1BA1>How clearly defined is the purpose (i.e. vision and mission) of the business?	</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=1BA2>How well defined are your business values and how well do they support the vision and mission?	</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=1BA3>How clear are the goals for the business?	</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=1BA4>How clearly defined is the benefit your business provides?	</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=1BA5>How well does the business's purpose and values align with your own?	</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <button style=margin-right:2px class="btn btn-lg btn-outline-primary btn-block" id=1BAadd onclick="BAadd(1);">+	</button>
+                                    <button style=margin-left:2px;width:47px; class="btn btn-lg btn-outline-primary btn-block" onclick="BArem(1)">-	</button>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        
+                        
+                
+                    </table>
                     
                 </div>
 
                 <div class = "d-flex justify-content-center">
                     <div class="d-flex justify-content-center">
-                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px>
+                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px;width:300px>
                             <div class ="d-flex justify-content-center">
-                                <h4 style=margin-top:20px; class="text-white">People</h4>
+                                <h4  class="text-white">People</h4>
                             </div>
                         </div>
                         
                         
                     </div>
+                    
+                </div>
+                <div class="d-flex justify-content-center"style=margin-top:20px;>
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=2BA1>Overall, what is the average skill level of all people in the business?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=2BA2>Overall, what is the average willingness of all people in the business?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=2BA3>Does every person in the business have a learn and grow plan?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=2BA4>How closely aligned are all people in the business with the purpose of the business?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=2BA5>How well does everyone in the business understand what could disrupt it?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <button style=margin-right:2px class="btn btn-lg btn-outline-primary btn-block" id=2BAadd onclick="BAadd(2);">+	</button>
+                                    <button style=margin-left:2px;width:47px; class="btn btn-lg btn-outline-primary btn-block" id=2BArem onclick="BArem(2);">-	</button>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        
+                
+                    </table>
                     
                 </div>
 
                 <div class = "d-flex justify-content-center">
                     <div class="d-flex justify-content-center">
-                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px>
+                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px;width:300px>
                             <div class ="d-flex justify-content-center">
-                                <h4 style=margin-top:20px; class="text-white">Product</h4>
+                                <h4  class="text-white">Product</h4>
                             </div>
                         </div>
                         
                         
                     </div>
+                    
+                </div>
+                <div class="d-flex justify-content-center"style=margin-top:20px;>
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=3BA1>How well defined is your target customers?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=3BA2>How appropriate is your business model for future growth?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=3BA3>How big is the size of the problem your business solves (i.e. 1 = very small, 10 = very big, 5 = average etc)?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=3BA4>How effective is your business's marketing activities (i.e. 1 = very ineffective, 10 = highly effective, 5 = average, etc)?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=3BA5>How profitable is the business in relation to what you think it could be (i.e. 1 = much lower, 10 = optimal, 5 = average etc)?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <button style=margin-right:2px class="btn btn-lg btn-outline-primary btn-block" id=3BAadd onclick="BAadd(3);">+	</button>
+                                    <button style=margin-left:2px;width:47px; class="btn btn-lg btn-outline-primary btn-block" id=3BArem onclick="BArem(3);">-	</button>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        
+                
+                    </table>
                     
                 </div>
 
                 <div class = "d-flex justify-content-center">
                     <div class="d-flex justify-content-center">
-                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px>
+                        <div class=row style=background:#3c9bf9;border-radius:4px;margin-top:25px;width:300px>
                             <div class ="d-flex justify-content-center">
-                                <h4 style=margin-top:20px; class="text-white">Process</h4>
+                                <h4  class="text-white">Process</h4>
                             </div>
                         </div>
                         
@@ -410,11 +535,136 @@
                     
                 </div>
 
+                <div class="d-flex justify-content-center" style=margin-top:20px;>
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=4BA1>How well documented is every single process in the business?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=4BA2>How well does every person in the business follow the documented procedures?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=4BA3>Overall, how effective are the business's processes?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=4BA4>How well systemised is the business?</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class=ta3 id=4BA5>How effective is the business's technology stack and use of data?		</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <button style=margin-right:2px class="btn btn-lg btn-outline-primary btn-block" id=4BAadd onclick="BAadd(4);">+	</button>
+                                    <button style=margin-left:2px;width:47px; class="btn btn-lg btn-outline-primary btn-block" id=4BArem onclick="BArem(4);">-	</button>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        
+                
+                    </table>
+                    
+                </div>
                 
                 
                 <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
                     <div class="d-flex justify-content-center"style="margin-bottom:15px">
-                        <button onclick="grabBASelections(); location.href = '#createTemplate3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Next</button>
+                        <button onclick="grabBASelections(); location.href = '#createTemplate4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Next</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+
+  </section>
+
+  
+
+  <section id="createTemplate4" class="smallhome">
+    
+    <div class="simplepagebox" style="margin:auto 0">
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:500px;margin-top:25px>
+                <div class ="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Finalize Template</h4>
+                </div>
+            </div>
+            
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:200px>
+            <h6>
+                Template Name
+            </h6>
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px;margin-bottom:150px>
+            
+            <textarea id=tatempname style=resize:none;>Template1</textarea>
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        
+                
+                <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                        <button onclick="createTemplate(); location.href = '#CoachHome';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Finish</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+
+  </section>
+
+  <section id="createSession1" class="smallhome">
+    
+    <div class="simplepagebox" style="margin:auto 0">
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:500px;margin-top:25px>
+                <div class ="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Create a session</h4>
+                </div>
+            </div>
+            
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:150px;>
+            <h6>
+                Template Selection
+            </h6>
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:10px>
+            
+            <select class="form-select" style=max-width:300px;margin-bottom:150px id=templateSelect>
+                <option selected>Quick Creation (No customization)</option>
+            </select>   
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        
+                
+                <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                        <button onclick="selectTemplate(1);" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Finish</button>
                     </div>
                 </div>
                 
@@ -429,5 +679,163 @@
   </section>
 
 
+  <section id="createSession2">
+    
+    <!--A simplepagebox is the grey box that all the content goes into-->
+    <!--If you want a different size box go to style.css and copy/paste the simple box section, change the name and change the values.-->
+    <div class="simplepagebox" style=margin:auto 0;>
+        <div class="d-flex justify-content-center">
+            <h4 style=margin-top:25px; class="text-black">Quick Template Customization</h4>
+        </div>
+
+        <!--A container is used here to hold every section (PersonalAlignment,Business Alignment etc) as a row. Inside those rows, 3 columns. 1 for title of row, 1 col for the list of options and last col for the check boxes-->
+        <div class="container" style=margin-top:50px>
+                <div class="row" style=margin-left:100px;margin-right:100px>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Personal Alignment & Goals</h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Personal Alignment</h6>
+                        </div>
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Personal Goals</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col" style=max-width:50px>
+                        <div class="row" style=height:45px>
+                            <input style=margin-top:15px;align-items:center;  type="checkbox" id="tempbox0">
+                        </div>
+                        <div class="row"style=height:45px>
+                            <input style=margin-top:10px; type="checkbox"  id="tempbox1">
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                <div class="row" style=margin-top:50px;margin-left:100px;margin-right:100px>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Business Alignment & Goals </h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row">
+                            <h6 class="text-black">Business Alignment</h6>
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Business Goals</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Business SWOT</h6>
+                            
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Business Purpose</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Model, Product/Services and Customers</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col"style=max-width:50px>
+                        <div class="row" style=height:29px>
+                            <input   type="checkbox" id="tempbox2">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  type="checkbox"  id="tempbox3">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input   type="checkbox" id="tempbox4">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input   type="checkbox" id="tempbox5">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input   type="checkbox" id="tempbox6">
+                        </div>
+                        
+                    
+                    </div>
+
+
+                </div> 
+                <div class="row" style=margin-top:35px;margin-left:100px;margin-right:100px>
+            
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Thought Assessment </h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row">
+                            <h6 class="text-black">Thought Assessment</h6>
+                        </div>
+                        <div class="row">
+                            <h6  class="text-black">Thought Assessment Outcomes</h6>
+                        </div>
+                        <div class="row">
+                            <h6 ; class="text-black">Thought Assessment Profiles</h6>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col"style=max-width:50px>
+                        <div class="row" style=height:29px>
+                            <input   type="checkbox" id="tempbox7">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input  type="checkbox"  id="tempbox8">
+                        </div>
+                        <div class="row"style=height:29px>
+                            <input   type="checkbox" id="tempbox9">
+                        </div>
+                        </div>
+                    
+        
+                </div>
+
+                <div class="row" style=margin-left:100px;margin-right:100px;margin-top:50px;>
+                    <div class="col" style=color:white;background:#3c9bf9;border-radius:4px>
+                        <h4 style=margin-top:25px; class="text-white">Business Financial Performance</h4>
+                    </div>
+                    <div class="col">
+                        
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Business Financial Performance</h6>
+                        </div>
+                        <div class="row"style=height:45px>
+                            <h6  class="text-black">Business Funnel Performance</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="col" style=max-width:50px>
+                        <div class="row" style=height:45px>
+                            <input style=margin-top:15px;align-items:center;  type="checkbox" id="tempbox10">
+                        </div>
+                        <div class="row"style=height:45px>
+                            <input style=margin-top:10px;  type="checkbox" id="tempbox11">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
+                    <div class="d-flex justify-content-center"style="margin-bottom:50px">
+                        <button onclick="grabSelections1(); location.href = '#createSession4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Next</button>
+                    </div>
+                </div>
+                
+
+
+        </div>
+
+
+    </div>
+
+
+  </section>
+
+
+  
 
   

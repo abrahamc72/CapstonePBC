@@ -16,6 +16,16 @@ section {
     
 }
 
+.smallhome {
+    border-radius: 6px;
+    justify-content: center;
+    max-width: 500px;
+    background: #eeeeee;
+    margin:0 auto;
+    box-shadow: -5px 5px #939597;
+    
+}
+
 .simplepagebox{
 
     border-radius:6px;
@@ -47,4 +57,22 @@ section {
     border-radius: 3px;
     border-color:#1e73be;
 }
-  
+
+.ta1
+{
+    resize: none;
+    width:120px;
+    height:100px;
+}
+
+.ta2
+{
+    resize:none;
+    width:700px;
+    height:100px
+}
+.ta3
+{
+    resize:none;
+    width:500px
+}

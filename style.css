@@ -76,3 +76,19 @@ section {
     resize:none;
     width:500px
 }
+
+.notbold
+{
+    font-weight:normal
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.cap-top
+{
+    caption-side: top;
+    text-align: center;
+}

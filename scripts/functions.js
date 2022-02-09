@@ -300,3 +300,16 @@ var PATicks = [0,0,0,0,0,0]
         
 
     }
+    // will move to 3 parameters for other columns/rows using: revamount, margin, netprofit
+    function netProfitCalc()
+    {
+        
+        var aramount = document.getElementById("ARACurrent").value;
+        var pm = document.getElementById("PMPercent").value;
+        if(aramount != null && pm != null){
+             var percent = pm / 100;
+             var result = aramount * percent;
+             document.getElementById("NPnum").value = result;
+        }
+        
+    }

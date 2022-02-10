@@ -7,9 +7,11 @@
     <ul>
     
         <H8>Testing Navigation</H8>
-      <li><a href="#CoachHome">HomeScreen</a></li>
+      <li><a href="#CoachHome">Coach Home</a></li>
       <li><a href="#createTemplate1">TemplateCreate</a></li>
       <li><a href="#createTemplate2">TemplateCreateAdditional</a></li>
+      <li><a href="#ClientHome">Client Home</a></li>
+      <li><a href="#clientTemplate2">Client Template 2</a></li>
     </ul>
   </nav>
 
@@ -39,11 +41,25 @@
         </div>
 
         <div class="d-flex justify-content-center"style="margin-bottom:50px">
-            <button onclick="location.href = '#createTemplate1';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;"type="button" id=createbutton>Create Template</button>
+            <button onclick="location.href = '#createTemplate1';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:50px;"type="button" id=createbutton>Create Template</button>
         </div>
   </section>
 
+    <!--Creation of Client home page-->
+  <section id="ClientHome">
+    <div>
+        <img src="image/logotransparent.png" style="width:220px;height:auto;margin-left:115px;margin-top:50px"></img>
+    </div>
+    <div class="d-flex justify-content-center" >
+        <div>
+            <h4 style=margin-top:50px class="text-black">Weekly Sessions</h4>   
+        </div>
+    </div>
+    <div class="d-flex justify-content-center"style="margin-top:50px">
+        <button onclick="location.href = '#clientsessions';"class="btn btn-lg btn-outline-primary btn-block" style="margin-bottom:50px;" type="button" id=createbutton>View Sessions</button>
+    </div>
 
+  </section>
 
 
   <section id="createTemplate1">
@@ -920,7 +936,7 @@
                 To Be Completed
             </h6>
         </div>
-        <div class="d-flex justify-content-center" style=margin-top:10px>
+        <div class="d-flex justify-content-center" style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
             
             <select class="form-select" multiple aria-label="multiple select example">
                 <option selected>19-01-2021</option>
@@ -939,7 +955,7 @@
                 Completed
             </h6>
         </div>
-        <div class="d-flex justify-content-center" style=margin-top:10px>
+        <div class="d-flex justify-content-center" style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
             
             <select class="form-select" multiple aria-label="multiple select example">
                 <option selected>None</option>
@@ -969,6 +985,118 @@
 
     </div>
 
+  </section>
+  <section id="clientsessions" class="smallhome">
+    <div class="simplepagebox" style="margin:auto 0">
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:500px;margin-top:25px>
+                <div class="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Sessions</h4>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center" style=margin-top:30px;>
+            <h6>Current Sessions</h6>
+        </div>
+        <div class="d-flex justify-content-center" style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>Bogdan : 08-02-2022</option>
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-center" style="margin-top:25px">
+            <h6>Previous Sessions</h6>
+        </div>
+        <div class="d-flex justify-content-center" style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>Cervantes : 19-01-2022</option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-center" style=margin-left:30px;margin-top:0px;>
+            <div class="d-flex justify-content-center"style="margin-bottom:15px">
+                <button onclick="location.href='#ClientHome';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:30px;margin-bottom:10px;margin-right:10px"type="button" id=createbutton>Return Home</button>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+  </section>
+  <section id="clientTemplate2" >
+      <div class="simplepagebox" >
+        <div class="d-flex justify-content-center" >
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:700px;margin-top:25px >
+                <div class="d-flex justify-content-center" >
+                    <h4 style="margin-top:25px;" class="text-white" > Personal Alignment</h4>
+                </div>
+            </div>
+        </div>
+
+            <div class="d-flex justify-content-center" >
+                <table class="table" >
+                    <tr>
+                        <th>Categories</th>
+                        <th>Personal Alignment Selections</th>
+                        <th>Current Score (of 10)</th>
+                        <th>Ideal Score in 12 months</th>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <th> <span class='notbold'></span>Finances</th>
+                            <th> <span class='notbold'></span>Is your financial position where you would like it to be? Are you earning the money you'd like?</th>
+                            <td> <input type="text" id="financeCurrent" onkeyup=currentScoreAvg() required></td>
+                            <td> <input type="text" id="financeIdeal" onkeyup=idealScoreAvg() required></td>
+                        </tr>
+                        <td>
+                            <tr>
+                                <th> <span class='notbold'></span>Health & Wellbeing</th>
+                                <th> <span class='notbold'></span>Is your financial position where you would like it to be? Are you earning the money you'd like?</th>
+                                <td> <input type="text" id="hwbCurrent" onkeyup=currentScoreAvg() required></td>
+                                <td> <input type="text" id="hwbIdeal" onkeyup=idealScoreAvg() required></td>
+                            </tr>
+
+                        </td>
+                        <td>
+                            <tr>
+                                <th> <span class='notbold'></span>Mindset</th>
+                                <th> <span class='notbold'></span>Is your mindset at the place you'd like it to be? Are you aware of your biases and limiting beliefs? Do you take actions to overcome them? Do you deal well with challenges, adversity, stress etc?</th>
+                                <td> <input type="text" id="mindCurrent" onkeyup=currentScoreAvg() required></td>
+                                <td> <input type="text" id="mindIdeal" onkeyup=idealScoreAvg() required></td>
+                            </tr>
+                        </td>
+                        <td>
+                            <tr>
+                                <th> <span class='notbold'></span>Knowledge & Skills</th>
+                                <th> <span class='notbold'></span>Are you engaging in ongoing personal and professional development? Is your level of knowledge and skills at the level you'd like it to be?</th>
+                                <td> <input type="text" id="kskCurrent" onkeyup=currentScoreAvg() required></td>
+                                <td> <input type="text" id="kskIdeal" onkeyup=idealScoreAvg() required></td>
+                            </tr>
+                        </td>
+                        <td>
+                            <tr>
+                                <th> <span class='notbold'></span>Personal Relationships</th>
+                                <th> <span class='notbold'></span>Are your relationships with family and friends at a level you'd like them to be?  </th>
+                                <td> <input type="text" id="prCurrent" onkeyup=currentScoreAvg() required></td>
+                                <td> <input type="text" id="prIdeal" onkeyup=idealScoreAvg() required></td>
+                            </tr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    </div>
   </section>
 
   

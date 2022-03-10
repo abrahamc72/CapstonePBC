@@ -13,6 +13,7 @@
       
       <li><a href="#BusinessFinancialClient">BusinessFinancialClient</a></li>
       <li><a href="#BusinessFunnelPerformance">BusinessFunnelPerformanceClient</a></li>
+      <li><a href="#SummaryandQuarterlyActions">SummaryandQuarterlyActions</a></li>
     </ul>
   </nav>
 
@@ -991,22 +992,28 @@
                     <tr>
                         <th>Financial Performance</th>
                         <th>Current</th>
-                        <th>Targets</th>
-<!--                        <table>
-                            <tr> <th colspan="3" align="center"> Targets </th> </tr>
-                            <tr> <th>1 Year</th> <th>3 Years</th> <th>5 Years</th> </tr>
-                            </table> -->
+                        <!-- <th>Targets</th> -->
+                        <th>
+                       <table>
+                            <tr> <th class=centered> Targets </th> </tr>
+                            <th>1 Year</th> 
+                            <th>3 Years</th> 
+                            <th>5 Years</th>
+
+                            </table>
+                        </th>
                     </tr>
                     <!-- not sure if i should let inputs having a name as well as an ID -->
                         <tr>
                           <th><span class='notbold'>Annual Revenue Amount</span></th>
                           <td><input type="text" id="ARACurrent"></br></td>
-                          <td></td>
-                          <td></td>
+                          <td><input type="text" id="ARACurrent"></br></td>
+                          <td><input type="text" id="ARACurrent"></br></td>
+                          <td><input type="text" id="ARACurrent"></br></td>
                         </tr>
                         <tr>
                           <th><span class='notbold'>Profit Margin (%)</span></th>
-                          <td><input type="text" id="PMPercent" onkeyup="netProfitCalc()" ></br></td>
+                          <td><input type="text" id="PMPercent" onkeyup="netProfitCalc('ARACurrent', 'PMPercent', 0)" ></br></td>
                           <td></td>
                           <td></td>
                         </tr>
@@ -1018,12 +1025,14 @@
                         </tr>
                         <tr>
                             <th><span class='notbold'>Average Revenue Per Customer</span></th>
-                            <td><input type="text" id="ARPC" required></br></td>
+                            <td><input type="text" id="ARPC" onkeyup="sync(ARPC)" onchange="newRevC()" required></br></td>
                             <td></td>
                             <td></td>
                           </tr>
                 </table>
-
+            </div>
+            <div>
+                
             </div>
 
          </div>
@@ -1054,78 +1063,118 @@
                     <!-- not sure if i should let inputs having a name as well as an ID -->
                         <tr class=centered>
                           <td>Leads</td>
-                          <td><input type="text" id="LeadC"></br></td>
-                          <td><input type="text" id="LeadC"></br></td>
+                          <td><input type="text" id="LeadC" onkeyup="Customers('LeadC', 'ConvRateC', 0), newRevC('CustomerC', 'ARPC', 0)" ></br></td>
+                          <td><input type="text" id="Leadi" onkeyup="Customers('LeadC', 'ConvRateC', 1)" ></br></td>
+                          <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Conversion Rate (%)</td>
-                            <td><input type="text" id="ConvRateC"></br></td>
-                            <td><input type="text" id="LeadC"></br></td>
+                            <td><input type="text" id="ConvRateC" onkeyup="Customers('LeadC', 'ConvRateC', 0), newRevC('CustomerC', 'ARPC', 0)" ></br></td>
+                            <td><input type="text" id="ConvRatei" onkeyup="Customers('LeadC', 'ConvRateC', 1)" ></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Customers</td>
-                            <td><input type="text" id="CustomerC" disabled></br></td>
-                            <td><input type="text" id="CustomerC" disabled></br></td>
+                            <!-- ARPC for Customeri must change but still unsure on how to make chart -->
+                            <td><input type="text" id="CustomerC" onchange="newRevC('CustomerC', 'ARPC', 0)" disabled></br></td>
+                            <td><input type="text" id="Customeri" onchange="newRevC('Customeri', 'ARPC', 1)" disabled></br></td> 
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Average Revenue Per Customer</td>
-                            <td><input type="text" id="ARPCC" disabled></br></td>
-                            <td><input type="text" id="ARPCC" disabled></br></td>
+                            <td><input type="text" id="ARPCC" onchange="CostAcqPercent('ARPCC', 'CostoAPCC', 0)" disabled></br></td>
+                            <td><input type="text" id="ARPCi" onchange="CostAcqPercent('ARPCi', 'CostoAPCi', 1)" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>New Revenue</td>
                             <td><input type="text" id="NewRC" disabled></br></td>
-                            <td><input type="text" id="NewRC" disabled></br></td>
+                            <td><input type="text" id="NewRi" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Profit Margin (%)</td>
-                            <td><input type="text" id="ProfitC"></br></td>
-                            <td><input type="text" id="LeadC"></br></td>
+                            <td><input type="text" id="ProfitC" onkeyup="netProfitCalc('NewRC', 'ProfitC', 1)"></br></td>
+                            <td><input type="text" id="Profiti" onkeyup="netProfitCalc('NewRi', 'Profiti', 2)"></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered disabled>
                             <td style="font-weight:bold;">Net Profit</td>
                             <td><input type="text" id="NetPC" disabled></br></td>
-                            <td><input type="text" id="NetPC" disabled></br></td>
+                            <td><input type="text" id="NetPi" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Cost Per Sales Person</td>
-                            <td><input type="text" id="CostPSPC"></br></td>
-                            <td><input type="text" id="LeadC"></br></td>
+                            <td><input type="text" id="CostPSPC" onkeyup="TotalSalesCost('CostPSPC', 'NumOSPC', 0)"></br></td>
+                            <td><input type="text" id="CostPSPi" onkeyup="TotalSalesCost('CostPSPi', 'NumOSPi', 1)"></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Number Of Sales People</td>
-                            <td><input type="text" id="NumOSPC"></br></td>
-                            <td><input type="text" id="LeadC"></br></td>
+                            <td><input type="text" id="NumOSPC" onkeyup="TotalSalesCost('CostPSPC', 'NumOSPC', 0)"></br></td>
+                            <td><input type="text" id="NumOSPi" onkeyup="TotalSalesCost('CostPSPi', 'NumOSPi', 1)"></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td style="font-style:italic; font-weight: 500;">Total Sales Costs</td>
                             <td><input type="text" id="TotalSCC" disabled></br></td>
-                            <td><input type="text" id="TotalSCC" disabled></br></td>
+                            <td><input type="text" id="TotalSCi" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Marketing Cost</td>
-                            <td><input type="text" id="MarketingC"></br></td>
-                            <td><input type="text" id="LeadC"></br></td>
+                            <td><input type="text" id="MarketingC" onkeyup="AddStuff('TotalSCC', 'MarketingC', 0), CostAcq('CustomerC', 'TotalSaMC', 0), CostAcqPercent('CostoAPCC', 'ARPCC', 0)"></br></td>
+                            <td><input type="text" id="Marketingi" onkeyup="AddStuff('TotalSCC', 'MarketingC', 1), CostAcq('CustomerC', 'TotalSaMC', 1), CostAcqPercent('CostoAPCi', 'ARPCi', 1)"></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
-                            <td>Total Sales & Marketing</td>
+                            <td style="font-style:italic; font-weight: 500;">Total Sales & Marketing</td>
                             <td><input type="text" id="TotalSaMC" disabled></br></td>
-                            <td><input type="text" id="TotalSaMC" disabled></br></td>
+                            <td><input type="text" id="TotalSaMi" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
-                            <td>Cost of Acquisition Per Customer</td>
-                            <td><input type="text" id="CostoAPCC" disabled></br></td>
-                            <td><input type="text" id="CostoAPCC" disabled></br></td>
+                            <td style="font-style:italic; font-weight: 500;">Cost of Acquisition Per Customer</td>
+                            <td><input type="text" id="CostoAPCC" onchange="CostAcq('CustomerC', 'TotalSaMC', 0)" disabled></br></td>
+                            <td><input type="text" id="CostoAPCi" onchange="CostAcq('CustomerC', 'TotalSaMC', 1)" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
-                            <td>Cost of Acquisition Per Customer (%)</td>
-                            <td><input type="text" id="CostoAPCpercentC" dsiabled></br></td>
-                            <td><input type="text" id="CostoAPCpercentC" dsiabled></br></td>
+                            <td style="font-style:italic; font-weight: 500;">Cost of Acquisition Per Customer (%)</td>
+                            <td><input type="text" id="CostoAPCpercentC" disabled></br></td>
+                            <td><input type="text" id="CostoAPCpercenti" disabled></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Existing Customer Retention Rate (%)</td>
                             <td><input type="text" id="ExistCRRpercentC"></br></td>
-                            <td><input type="text" id="ExistCRRpercentC"></br></td>
+                            <td><input type="text" id="ExistCRRpercenti"></br></td>
+                            <td><textarea placeholder="Enter Info"></textarea> </td>
                         </tr>
                 </table>
+  </section>
+
+
+  <section id="SummaryandQuarterlyActions">
+    <div class="simplepagebox" style=margin:auto 0;>
+        
+        <div class="d-flex justify-content-center">
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:700px;margin-top:25px>
+                <div class ="d-flex justify-content-center">
+                    <h4 style=margin-top:25px; class="text-white">Summary and Quarterly Actions for the Next 12 Months</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style=margin-top:50px;>
+            <div class= "d-flex justify-content-center">
+                <table class=table>
+
+                    <tr class=centered>
+                        <th>Purpose of the Business</th>
+                    </tr>
+                    </table>
+                </div>
+        </div>
   </section>

@@ -35,6 +35,8 @@ var selTempName = "";
 
 var features = ["Finances","Health","Mindset","Knowledge","Relationships","Time"]
 var PATicks = [0,0,0,0,0,0]
+
+var activenavigation = "";
 //window.location.href = "#CoachHome";
     //grab template selections
     function grabSelections1()

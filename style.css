@@ -5,6 +5,15 @@ section:target {
   display: block;
 }
 
+#LoginPage {
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 500px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
+}
+
 #CoachHome {
   border-radius: 6px;
   justify-content: center;
@@ -77,4 +86,24 @@ section:target {
 .ta3 {
   resize: none;
   width: 500px;
+}
+
+.login_form_button,
+.login_form_button:active,
+.login_form_button:visited {
+  background-color: #3c9bf9 !important;
+  border-color: #3c9bf9 !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.login_form_button:hover {
+  background-color: #1e73be !important;
+}
+
+.hidden {
+  display: none;
+}
+.unhidden {
+  display: block;
 }

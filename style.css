@@ -1,68 +1,112 @@
 section {
-    display: none;
-  }
-  section:target {
-    display: block;
-  }
+  display: none;
+}
+section:target {
+  display: block;
+}
 
+#LoginPage {
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 500px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
+}
 
 #CoachHome {
-    border-radius: 6px;
-    justify-content: center;
-    max-width: 500px;
-    background: #eeeeee;
-    margin:0 auto;
-    box-shadow: -5px 5px #939597;
-    
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 500px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
+}
+
+#ClientHome {
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 500px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
 }
 
 .smallhome {
-    border-radius: 6px;
-    justify-content: center;
-    max-width: 500px;
-    background: #eeeeee;
-    margin:0 auto;
-    box-shadow: -5px 5px #939597;
-    
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 500px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
 }
 
-.simplepagebox{
-
-    border-radius:6px;
-    justify-content:center;
-    max-width:1000px;
-    background: #eeeeee;
-    margin: 0 auto;
-    box-shadow: -5px 5px #939597;
+.simplepagebox {
+  border-radius: 6px;
+  justify-content: center;
+  max-width: 1000px;
+  background: #eeeeee;
+  margin: 0 auto;
+  box-shadow: -5px 5px #939597;
 }
 
-.pagecontent
-{
-    justify-content: center;
+.pagecontent {
+  justify-content: center;
 }
 
-.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited {
-    background-color: #3c9bf9 !important;
-    border-color:#3c9bf9 !important;
-    color:white !important;
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:visited {
+  background-color: #3c9bf9 !important;
+  border-color: #3c9bf9 !important;
+  color: white !important;
 }
 
-.btn-outline-primary:hover{
-
-    background-color:#1e73be !important;
+.btn-outline-primary:hover {
+  background-color: #1e73be !important;
 }
 
 .row {
-    border: px solid;
-    border-radius: 3px;
-    border-color:#1e73be;
+  border: px solid;
+  border-radius: 3px;
+  border-color: #1e73be;
 }
 
-.ta1
-{
-    resize: none;
-    width:120px;
-    height:100px;
+.ta1 {
+  resize: none;
+  width: 120px;
+  height: 100px;
+}
+
+.ta2 {
+  resize: none;
+  width: 700px;
+  height: 100px;
+}
+.ta3 {
+  resize: none;
+  width: 500px;
+}
+
+.login_form_button,
+.login_form_button:active,
+.login_form_button:visited {
+  background-color: #3c9bf9 !important;
+  border-color: #3c9bf9 !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.login_form_button:hover {
+  background-color: #1e73be !important;
+}
+
+
+.hidden {
+  display: none;
+}
+.unhidden {
+  display: block;
 }
 
 .ta2
@@ -92,3 +136,4 @@ section {
     caption-side: top;
     text-align: center;
 }
+

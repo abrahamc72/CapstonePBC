@@ -301,6 +301,25 @@ var PATicks = [0,0,0,0,0,0]
         
 
     }
+    function currentScoreAvg()
+    {
+        var arr = document.getElementById("financeCurrent").value;
+        var total = 0;
+        var avg = 0;
+
+        for(var i = 0; i < arr.length; i++)
+        {
+            if(parseInt(arr[i].value))
+            {
+                total += parseInt(arr[i].value);
+            }
+        }
+
+        avg = total / arr.length;
+
+        
+
+
     // will move to 3 parameters for other columns/rows using: revamount, margin, netprofit
     function netProfitCalc(value1, value2, flag)
     {

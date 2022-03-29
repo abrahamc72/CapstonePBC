@@ -101,9 +101,39 @@ section:target {
   background-color: #1e73be !important;
 }
 
+
 .hidden {
   display: none;
 }
 .unhidden {
   display: block;
 }
+
+.ta2
+{
+    resize:none;
+    width:700px;
+    height:100px
+}
+.ta3
+{
+    resize:none;
+    width:500px
+}
+
+.notbold
+{
+    font-weight:normal
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.cap-top
+{
+    caption-side: top;
+    text-align: center;
+}
+

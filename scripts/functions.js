@@ -36,7 +36,6 @@ var selTempName = "";
 var features = ["Finances","Health","Mindset","Knowledge","Relationships","Time"]
 var PATicks = [0,0,0,0,0,0]
 
-var activenavigation = "";
 //window.location.href = "#CoachHome";
     //grab template selections
     function grabSelections1()
@@ -320,4 +319,105 @@ var activenavigation = "";
 
         
 
+
+    // will move to 3 parameters for other columns/rows using: revamount, margin, netprofit
+    function netProfitCalc(value1, value2, flag)
+    {
+        
+        var aramount = document.getElementById(value1).value;
+        var pm = document.getElementById(value2).value;
+        if(aramount != null && pm != null){
+             var percent = pm / 100;
+             var result = aramount * percent;
+             if(flag == 0){
+                document.getElementById("NPnum").value = result;
+             }
+             else if(flag == 1){
+                document.getElementById("NetPC").value = result;
+             }
+             else if(flag == 2){
+                document.getElementById("NetPi").value = result;
+             }
+             
+        }
+        
+    }
+
+    function Customers(value1, value2, flag){
+        var leadsC = document.getElementById(value1).value;
+        var convRate = document.getElementById(value2).value / 100;
+        if (leadsC != null && convRate != null){
+            var result = leadsC * convRate;
+            if(flag == 0){
+                document.getElementById("CustomerC").value = result;
+            }
+            if(flag == 1){
+                document.getElementById("Customeri").value = result;
+            }
+            
+        }
+    }
+    function sync(text){
+        document.getElementById("ARPCC").value = text.value;
+    }
+
+    // function works when "ARPC" is changed, not "ARPCC"
+    function newRevC(value1, value2, flag){
+        var cust = document.getElementById(value1).value;
+        var revPCust= document.getElementById(value2).value;
+        var result = cust * revPCust;
+        if(flag == 0){
+            document.getElementById("NewRC").value = result;
+        }
+        else if(flag == 1){
+            document.getElementById("NewRi").value = result;
+        }
+    }
+
+    function TotalSalesCost(value1, value2, flag){
+        var costPerson = document.getElementById(value1).value;
+        var numberPerson = document.getElementById(value2).value;
+        var result = costPerson * numberPerson;
+        if(flag == 0){
+            document.getElementById("TotalSCC").value = result;
+        }
+        else if(flag == 1){
+            document.getElementById("TotalSCi").value = result;
+        }
+    }
+    
+    function AddStuff(value1, value2, flag){
+        var add1 = document.getElementById(value1).value;
+        var add2 = document.getElementById(value2).value;
+        result = add1 + add2;
+        if(flag == 0){
+            document.getElementById("TotalSaMC").value = result;
+        }
+        else if(flag == 1){
+            document.getElementById("TotalSaMi").value = result;
+        }
+    }
+
+    function CostAcq(value1, value2, flag){
+        var div1 = document.getElementById(value1).value;
+        var div2 = document.getElementById(value2).value;
+        result = div2 / div1;
+        if(flag == 0){
+            document.getElementById("CostoAPCC").value = result;
+        }
+        else if(flag == 1){
+            document.getElementById("CostoAPCi").value = result;
+        }
+    }
+
+    function CostAcqPercent(value1, value2, flag){
+        var part1 = document.getElementById(value1).value;
+        var part2 = document.getElementById(value2).value;
+        result = (part1 / part2) * 100 + "%";
+        if(flag == 0){
+            document.getElementById("CostoAPCpercentC").value = result;
+        }
+        else if(flag == 1){
+            document.getElementById("CostoAPCpercenti").value = result;
+        }
     }

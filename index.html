@@ -2098,31 +2098,31 @@
                     </tr>
                         <tr>
                           <th><span class='notbold'>Annual Revenue Amount</span></th>
-                          <td><input style="width:150px;" type="text" id="ARAC" onkeyup="netProfitCalc('ARAC', 'PMC', 'NP', 'C')"></br></td>
-                          <td><input style="width:150px;" type="text" id="ARA1" onkeyup="netProfitCalc('ARA1', 'PM1', 'NP', '1')"></br></td>
-                          <td><input style="width:150px;" type="text" id="ARA3" onkeyup="netProfitCalc('ARA3', 'PM3', 'NP', '3')"></br></td>
-                          <td><input style="width:150px;" type="text" id="ARA5" onkeyup="netProfitCalc('ARA5', 'PM5', 'NP', '5')"></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer1" onkeyup="netProfitCalc('BusFinPer1', 'BusFinPer5', 'BusFinPer9')"></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer2" onkeyup="netProfitCalc('BusFinPer2', 'BusFinPer6', 'BusFinPer10')"></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer3" onkeyup="netProfitCalc('BusFinPer3', 'BusFinPer7', 'BusFinPer11')"></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer4" onkeyup="netProfitCalc('BusFinPer4', 'BusFinPer8', 'BusFinPer12')"></br></td>
                         </tr>
                         <tr>
                           <th><span class='notbold'>Profit Margin (%)</span></th>
-                          <td><input style="width:150px;" type="text" id="PMC" onkeyup="sync(PMC, 'Profit' , 'C'), netProfitCalc('ARAC', 'PMC', 'NP', 'C') , netProfitCalc('NewRC', 'PMC', 'NetP', 'C')" ></br></td>
-                          <td><input style="width:150px;" type="text" id="PM1" onkeyup="sync(PM1, 'Profit' , 'i'), netProfitCalc('ARA1', 'PM1', 'NP', '1'), netProfitCalc('NewRC', 'PM1', 'NetP', 'i')" ></br></td>
-                          <td><input style="width:150px;" type="text" id="PM3" onkeyup="netProfitCalc('ARA3', 'PM3', 'NP', '3')" ></br></td>
-                          <td><input style="width:150px;" type="text" id="PM5" onkeyup="netProfitCalc('ARA5', 'PM5', 'NP', '5')" ></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer5" onkeyup="sync(BusFinPer5, 'BusFunnel16'), netProfitCalc('BusFinPer1', 'BusFinPer5', 'BusFinPer9') , netProfitCalc('BusFunnel13', 'BusFinPer5', 'BusFunnel19')" ></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer6" onkeyup="sync(BusFinPer6, 'BusFunnel17'), netProfitCalc('BusFinPer2', 'BusFinPer6', 'BusFinPer10'), netProfitCalc('BusFunnel14', 'BusFinPer6', 'BusFunnel20')" ></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer7" onkeyup="netProfitCalc('BusFinPer3', 'BusFinPer7', 'BusFinPer11')" ></br></td>
+                          <td><input style="width:150px;" type="text" id="BusFinPer8" onkeyup="netProfitCalc('BusFinPer4', 'BusFinPer8', 'BusFinPer12')" ></br></td>
                         </tr>
                         <tr>
                           <th>Net Profit (before tax)</th>
-                          <td><input  style="width:150px;" type="text" id="NPC" disabled></br></td>
-                          <td><input  style="width:150px;" type="text" id="NP1" disabled></br></td>
-                          <td><input  style="width:150px;" type="text" id="NP3" disabled></br></td>
-                          <td><input  style="width:150px;" type="text" id="NP5" disabled></br></td>
+                          <td><input  style="width:150px;" type="text" id="BusFinPer9" disabled></br></td>
+                          <td><input  style="width:150px;" type="text" id="BusFinPer10" disabled></br></td>
+                          <td><input  style="width:150px;" type="text" id="BusFinPer11" disabled></br></td>
+                          <td><input  style="width:150px;" type="text" id="BusFinPer12" disabled></br></td>
                         </tr>
                         <tr>
                             <th><span class='notbold'>Average Revenue Per Customer</span></th>
-                            <td><input style="width:150px;" type="text" id="ARPC" onkeyup="sync(ARPC, 'ARPC', 'C'), multiply('CustomerC', 'ARPC', 'NewR' , 'C'), Customers('LeadC', 'ConvRateC', 'C') ,netProfitCalc('NewRC', 'ProfitC', 'NetP', 'C') , CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')" required></br></td>
-                            <td><input style="width:150px;" type="text" id="ARPC1" onkeyup="sync(ARPC1, 'ARPC' , 'i'), multiply('Customeri', 'ARPC1', 'NewR', 'i'), Customers('Leadi', 'ConvRatei', 'i'), netProfitCalc('NewRi', 'Profiti', 'NetP', 'i') , CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')" required></br></td>
-                            <td><input style="width:150px;" type="text" id="ARPC3" required></br></td>
-                            <td><input style="width:150px;" type="text" id="ARPC5" required></br></td>
+                            <td><input style="width:150px;" type="text" id="BusFinPer13" onkeyup="sync(BusFinPer13, 'BusFunnel10'), multiply('BusFunnel7', 'BusFinPer13', 'BusFunnel13'), Customers('BusFunnel1', 'BusFunnel4', 'BusFunnel7') ,netProfitCalc('BusFunnel13', 'BusFunnel16', 'BusFunnel19') , CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')" required></br></td>
+                            <td><input style="width:150px;" type="text" id="BusFinPer14" onkeyup="sync(BusFinPer14, 'BusFunnel11'), multiply('BusFunnel8', 'BusFinPer14', 'BusFunnel14'), Customers('BusFunnel2', 'BusFunnel5', 'BusFunnel8'), netProfitCalc('BusFunnel14', 'BusFunnel17', 'BusFunnel20') , CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')" required></br></td>
+                            <td><input style="width:150px;" type="text" id="BusFinPer15" required></br></td>
+                            <td><input style="width:150px;" type="text" id="BusFinPer16" required></br></td>
                           </tr>
                 </table>
             </div>
@@ -2154,93 +2154,93 @@
                     <!-- not sure if i should let inputs having a name as well as an ID -->
                         <tr class=centered>
                           <td>Leads</td>
-                          <td><input type="text" id="LeadC" onkeyup="Customers('LeadC', 'ConvRateC', 'C'), multiply('CustomerC', 'ARPC', 'NewR' , 'C'), netProfitCalc('NewRC', 'PMC', 'NetP', 'C'), CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')" ></br></td>
-                          <td><input type="text" id="Leadi" onkeyup="Customers('Leadi', 'ConvRatei', 'i'), multiply('Customeri', 'ARPC1', 'NewR', 'i'), netProfitCalc('NewRi', 'PM1', 'NetP', 'i'), CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')" ></br></td>
-                          <td><textarea placeholder="Enter Info"></textarea> </td>
+                          <td><input type="text" id="BusFunnel1" onkeyup="Customers('BusFunnel1', 'BusFunnel4', 'BusFunnel7'), multiply('BusFunnel7', 'BusFinPer13', 'BusFunnel13'), netProfitCalc('BusFunnel13', 'BusFinPer5', 'BusFunnel19'), CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')" ></br></td>
+                          <td><input type="text" id="BusFunnel2" onkeyup="Customers('BusFunnel2', 'BusFunnel5', 'BusFunnel8'), multiply('BusFunnel8', 'BusFinPer14', 'BusFunnel14'), netProfitCalc('BusFunnel14', 'BusFinPer6', 'BusFunnel20'), CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')" ></br></td>
+                          <td><textarea id="BusFunnel3" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Conversion Rate (%)</td>
-                            <td><input type="text" id="ConvRateC" onkeyup="Customers('LeadC', 'ConvRateC', 'C'), multiply('CustomerC', 'ARPC', 'NewR' , 'C'), netProfitCalc('NewRC', 'PMC', 'NetP', 'C'), CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')" ></br></td>
-                            <td><input type="text" id="ConvRatei" onkeyup="Customers('Leadi', 'ConvRatei', 'i'), multiply('Customeri', 'ARPC1', 'NewR', 'i'), netProfitCalc('NewRi', 'PM1', 'NetP', 'i'), CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')" ></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel4" onkeyup="Customers('BusFunnel1', 'BusFunnel4', 'BusFunnel7'), multiply('BusFunnel7', 'BusFinPer13', 'BusFunnel13'), netProfitCalc('BusFunnel13', 'BusFinPer5', 'BusFunnel19'), CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')" ></br></td>
+                            <td><input type="text" id="BusFunnel5" onkeyup="Customers('BusFunnel2', 'BusFunnel5', 'BusFunnel8'), multiply('BusFunnel8', 'BusFinPer14', 'BusFunnel14'), netProfitCalc('BusFunnel14', 'BusFinPer6', 'BusFunnel20'), CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')" ></br></td>
+                            <td><textarea id="BusFunnel6" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Customers</td>
-                            <td><input type="text" id="CustomerC" onchange="multiply('CustomerC', 'ARPC', 'NewR' , 'C'), netProfitCalc('NewRC', 'PMC', 'NetP', 'C')" disabled></br></td>
-                            <td><input type="text" id="Customeri" onchange="multiply('Customeri', 'ARPC1', 'NewR', 'i'), netProfitCalc('NewRi', 'PM1', 'NetP', 'i')" disabled></br></td> 
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel7" onchange="multiply('BusFunnel7', 'BusFinPer13', 'BusFunnel13'), netProfitCalc('BusFunnel13', 'BusFinPer5', 'BusFunnel19')" disabled></br></td>
+                            <td><input type="text" id="BusFunnel8" onchange="multiply('BusFunnel8', 'BusFinPer14', 'BusFunnel14'), netProfitCalc('BusFunnel14', 'BusFinPer6', 'BusFunnel20')" disabled></br></td> 
+                            <td><textarea id="BusFunnel9" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Average Revenue Per Customer</td>
-                            <td><input type="text" id="ARPCC" disabled></br></td>
-                            <td><input type="text" id="ARPCi" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel10" disabled></br></td>
+                            <td><input type="text" id="BusFunnel11" disabled></br></td>
+                            <td><textarea id="BusFunnel12" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>New Revenue</td>
-                            <td><input type="text" id="NewRC" disabled></br></td>
-                            <td><input type="text" id="NewRi" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel13" disabled></br></td>
+                            <td><input type="text" id="BusFunnel14" disabled></br></td>
+                            <td><textarea id="BusFunnel15" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Profit Margin (%)</td>
-                            <td><input type="text" id="ProfitC" onkeyup="netProfitCalc('NewRC', 'PMC', 'NetP', 'C')" disabled></br></td>
-                            <td><input type="text" id="Profiti" onkeyup="netProfitCalc('NewRi', 'PM1', 'NetP', 'i')" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel16" onkeyup="netProfitCalc('BusFunnel13', 'BusFinPer5', 'BusFunnel19')" disabled></br></td>
+                            <td><input type="text" id="BusFunnel17" onkeyup="netProfitCalc('BusFunnel14', 'BusFinPer6', 'BusFunnel20')" disabled></br></td>
+                            <td><textarea id="BusFunnel18" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered disabled>
                             <td style="font-weight:bold;">Net Profit</td>
-                            <td><input type="text" id="NetPC" disabled></br></td>
-                            <td><input type="text" id="NetPi" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel19" disabled></br></td>
+                            <td><input type="text" id="BusFunnel20" disabled></br></td>
+                            <td><textarea id="BusFunnel21" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Cost Per Sales Person</td>
-                            <td><input type="text" id="CostPSPC" onkeyup="multiply('CostPSPC', 'NumOSPC', 'TotalSC', 'C'), AddStuff('TotalSCC', 'MarketingC', 'C'), CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')"></br></td>
-                            <td><input type="text" id="CostPSPi" onkeyup="multiply('CostPSPi', 'NumOSPi', 'TotalSC', 'i'), AddStuff('TotalSCi', 'Marketingi', 'i'), CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')"></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel22" onkeyup="multiply('BusFunnel22', 'BusFunnel25', 'BusFunnel28'), AddStuff('BusFunnel28', 'BusFunnel31', 'BusFunnel34'), CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')"></br></td>
+                            <td><input type="text" id="BusFunnel23" onkeyup="multiply('BusFunnel23', 'BusFunnel26', 'BusFunnel29'), AddStuff('BusFunnel29', 'BusFunnel32', 'BusFunnel35'), CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')"></br></td>
+                            <td><textarea id="BusFunnel24" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Number Of Sales People</td>
-                            <td><input type="text" id="NumOSPC" onkeyup="multiply('CostPSPC', 'NumOSPC', 'TotalSC', 'C'), AddStuff('TotalSCC', 'MarketingC', 'C'), CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')"></br></td>
-                            <td><input type="text" id="NumOSPi" onkeyup="multiply('CostPSPi', 'NumOSPi', 'TotalSC', 'i'), AddStuff('TotalSCi', 'Marketingi', 'i'), CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')"></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel25" onkeyup="multiply('BusFunnel22', 'BusFunnel25', 'BusFunnel28'), AddStuff('BusFunnel28', 'BusFunnel31', 'BusFunnel34'), CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')"></br></td>
+                            <td><input type="text" id="BusFunnel26" onkeyup="multiply('BusFunnel23', 'BusFunnel26', 'BusFunnel29'), AddStuff('BusFunnel29', 'BusFunnel32', 'BusFunnel35'), CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')"></br></td>
+                            <td><textarea id="BusFunnel27" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td style="font-style:italic; font-weight: 500;">Total Sales Costs</td>
-                            <td><input type="text" id="TotalSCC" disabled></br></td>
-                            <td><input type="text" id="TotalSCi" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel28" disabled></br></td>
+                            <td><input type="text" id="BusFunnel29" disabled></br></td>
+                            <td><textarea id="BusFunnel30" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Marketing Cost</td>
-                            <td><input type="text" id="MarketingC" onkeyup="AddStuff('TotalSCC', 'MarketingC', 'C'), CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')"></br></td>
-                            <td><input type="text" id="Marketingi" onkeyup="AddStuff('TotalSCi', 'Marketingi', 'i'), CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')"></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel31" onkeyup="AddStuff('BusFunnel28', 'BusFunnel31', 'BusFunnel34'), CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')"></br></td>
+                            <td><input type="text" id="BusFunnel32" onkeyup="AddStuff('BusFunnel29', 'BusFunnel32', 'BusFunnel35'), CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')"></br></td>
+                            <td><textarea id="BusFunnel33" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td style="font-style:italic; font-weight: 500;">Total Sales & Marketing</td>
-                            <td><input type="text" id="TotalSaMC" disabled></br></td>
-                            <td><input type="text" id="TotalSaMi" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel34" disabled></br></td>
+                            <td><input type="text" id="BusFunnel35" disabled></br></td>
+                            <td><textarea id="BusFunnel36" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td style="font-style:italic; font-weight: 500;">Cost of Acquisition Per Customer</td>
-                            <td><input type="text" id="CostoAPCC" onchange="CostAcq('CustomerC', 'TotalSaMC', 'C', 'ARPC')" disabled></br></td>
-                            <td><input type="text" id="CostoAPCi" onchange="CostAcq('Customeri', 'TotalSaMi', 'i', 'ARPC1')" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel37" onchange="CostAcq('BusFunnel7', 'BusFunnel34', 'BusFunnel37', 'BusFinPer13', 'BusFunnel40')" disabled></br></td>
+                            <td><input type="text" id="BusFunnel38" onchange="CostAcq('BusFunnel8', 'BusFunnel35', 'BusFunnel38', 'BusFinPer14', 'BusFunnel41')" disabled></br></td>
+                            <td><textarea id="BusFunnel39" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td style="font-style:italic; font-weight: 500;">Cost of Acquisition Per Customer (%)</td>
-                            <td><input type="text" id="CostoAPCpercentC" disabled></br></td>
-                            <td><input type="text" id="CostoAPCpercenti" disabled></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel40" disabled></br></td>
+                            <td><input type="text" id="BusFunnel41" disabled></br></td>
+                            <td><textarea id="BusFunnel42" placeholder="Enter Info"></textarea> </td>
                         </tr>
                         <tr class=centered>
                             <td>Existing Customer Retention Rate (%)</td>
-                            <td><input type="text" id="ExistCRRpercentC"></br></td>
-                            <td><input type="text" id="ExistCRRpercenti"></br></td>
-                            <td><textarea placeholder="Enter Info"></textarea> </td>
+                            <td><input type="text" id="BusFunnel43"></br></td>
+                            <td><input type="text" id="BusFunnel44"></br></td>
+                            <td><textarea id="BusFunnel45" placeholder="Enter Info"></textarea> </td>
                         </tr>
                 </table>
   </section>
@@ -2264,15 +2264,15 @@
                 <table class=table>
                     <tr>
                         <th>Purpose</th>
-                        <td ><input type="text" style ="position:relative; left:325px" id="sumPur" ></br></td>
+                        <td ><input type="text" onkeyup="saveBusinessFunnels()" style ="position:relative; left:325px" id="SQA1" ></br></td>
                     </tr>
                     <tr>
                         <th>Vision</th>
-                        <td><input type="text" style ="position:relative; left:325px" id="sumVis" ></br></td>
+                        <td><input type="text" style ="position:relative; left:325px" id="SQA2" ></br></td>
                     </tr>
                     <tr>
                         <th>Mission</th>
-                        <td><input type="text" style ="position:relative; left:325px" id="sumMis" ></br></td>
+                        <td><input type="text" style ="position:relative; left:325px" id="SQA3" ></br></td>
                     </tr>
                 </table>
 
@@ -2282,27 +2282,27 @@
                     <table class=table>
                         <tr>
                             <th>Business Model (how you make money)</th>
-                            <td><input type="text" id="sumBusMod" ></br></td>
+                            <td><input type="textarea" id="SQA4" ></br></td>
                         </tr>
                         <tr>
                             <th>Channels</th>
-                            <td><input type="text" id="sumChann" ></br></td>
+                            <td><input type="textarea" id="SQA5" ></br></td>
                         </tr>
                         <tr>
                             <th>Product/Service Offered</th>
-                            <td><input type="text" id="sumPrSeOf" ></br></td>
+                            <td><input type="textarea" id="SQA6" ></br></td>
                         </tr>
                         <tr>
                             <th>Problem This Solves</th>
-                            <td><input type="text" id="sumPrbSolv" ></br></td>
+                            <td><input type="textarea" id="SQA7" ></br></td>
                         </tr>
                         <tr>
                             <th>Value or Benefit Delivered</th>
-                            <td><input type="text" id="sumValBenD" ></br></td>
+                            <td><input type="textarea" id="SQA8" ></br></td>
                         </tr>
                         <tr>
                             <th>Target Customer</th>
-                            <td><input type="text" id="sumTargC" ></br></td>
+                            <td><input type="textarea" id="SQA9" ></br></td>
                         </tr>
                     </table>
 
@@ -2314,32 +2314,32 @@
                                 <th>3 Key Weaknesses</th>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyStr1" ></br></td>
-                                <td><input type="text" id="KeyWeak1" ></br></td>
+                                <td><input type="textarea" id="SQA10" ></br></td>
+                                <td><input type="textarea" id="SQA11" ></br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyStr2" ></br></td>
-                                <td><input type="text" id="KeyWeak2" ></br></td>
+                                <td><input type="textarea" id="SQA12" ></br></td>
+                                <td><input type="textarea" id="SQA13" ></br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyStr3" ></br></td>
-                                <td><input type="text" id="KeyWeak3" ></br></td>
+                                <td><input type="textarea" id="SQA14" ></br></td>
+                                <td><input type="textarea" id="SQA15" ></br></td>
                             </tr>
                             <tr>
                                 <th>3 Key Opportunities</th>
                                 <th>3 Key Threats</th>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyOpp1" ></br></td>
-                                <td><input type="text" id="KeyThre1" ></br></td>
+                                <td><input type="textarea" id="SQA16" ></br></td>
+                                <td><input type="textarea" id="SQA17" ></br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyOpp2" ></br></td>
-                                <td><input type="text" id="KeyThre2" ></br></td>
+                                <td><input type="textarea" id="SQA18" ></br></td>
+                                <td><input type="textarea" id="SQA19" ></br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" id="KeyOpp3" ></br></td>
-                                <td><input type="text" id="KeyThre3" ></br></td>
+                                <td><input type="textarea" id="SQA20" ></br></td>
+                                <td><input type="textarea" id="SQA21" ></br></td>
                             </tr>
                         </table>
                 </div>
@@ -2357,31 +2357,27 @@
                         </tr>
                             <tr>
                               <th><span>Annual Revenue Amount</span></th>
-                              <td><input style="width:150px;" type="text" id="sumARAC" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumARA1" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumARA3" disabled></br></td>
-                              <td><input style="width:150px;" type="text" id="sumARA5" disabled ></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA22" disabled ></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA23" disabled ></br></td>
+                              <td><input style="width:150px;" type="textarea" id="SQA24" disabled></br></td>
                             </tr>
                             <tr>
                               <th><span>Profit Margin (%)</span></th>
-                              <td><input style="width:150px;" type="text" id="sumPMC" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumPM1" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumPM3" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumPM5" disabled ></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA25" disabled ></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA26" disabled ></br></td>
+                              <td><input style="width:150px;" id="SQA27" disabled ></br></td>
                             </tr>
                             <tr>
                               <th>Net Profit (before tax)</th>
-                              <td><input  style="width:150px;" type="text" id="sumNPC" disabled></br></td>
-                              <td><input  style="width:150px;" type="text" id="sumNP1" disabled></br></td>
-                              <td><input  style="width:150px;" type="text" id="sumNP3" disabled></br></td>
-                              <td><input  style="width:150px;" type="text" id="sumNP5" disabled></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA28" disabled ></br></td>
+                              <td><input style="width:150px;" type="text" id="SQA29" disabled ></br></td>
+                              <td><input  style="width:150px;" type="textarea" id="SQA30" disabled></br></td>
                             </tr>
                             <tr>
                                 <th><span>Average Revenue Per Customer</span></th>
-                                <td><input style="width:150px;" type="text" id="sumARPC" disabled></br></td>
-                                <td><input style="width:150px;" type="text" id="sumARPC1" disabled></br></td>
-                                <td><input style="width:150px;" type="text" id="sumARPC3" disabled></br></td>
-                                <td><input style="width:150px;" type="text" id="sumARPC5" disabled></br></td>
+                                <td><input  style="width:150px;" type="text" id="SQA31" disabled></br></td>
+                                <td><input  style="width:150px;" type="text" id="SQA32" disabled></br></td>
+                                <td><input  style="width:150px;" type="textarea" id="SQA33" disabled></br></td>
                               </tr>
                     </table>
                 </div>
@@ -2399,9 +2395,9 @@
                         </tr>
                             <tr>
                               <th><span>Key Goals to Achieve:</span></th>
-                              <td><input style="width:150px;" type="text" id="sumARAC" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumARA1" disabled ></br></td>
-                              <td><input style="width:150px;" type="text" id="sumARA3" disabled></br></td>
+                              <td><input style="width:150px;" type="textarea" id="SQA" disabled ></br></td>
+                              <td><input style="width:150px;" type="textarea" id="SQA" disabled ></br></td>
+                              <td><input style="width:150px;" type="textarea" id="SQA" disabled></br></td>
                             </tr>
                     </table>
                 </div>

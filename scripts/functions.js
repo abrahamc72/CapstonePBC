@@ -36,6 +36,11 @@ var selTempName = "";
 var features = ["Finances","Health","Mindset","Knowledge","Relationships","Time"]
 var PATicks = [0,0,0,0,0,0]
 
+var BusFunnels = Array.apply(null, Array(45)).map(function () {});
+var BusFinancials = Array.apply(null, Array(16)).map(function () {});
+var Summaries = Array.apply(null, Array(56)).map(function () {});
+
+
 //window.location.href = "#CoachHome";
     //grab template selections
     function grabSelections1()
@@ -318,68 +323,99 @@ var PATicks = [0,0,0,0,0,0]
         avg = total / arr.length;
     }
         
+    function saveBusinessFinancials(){
+        for (let i = 0; i < BusFinancials.length; i++){
+            if(document.getElementById("BusFinPer"+ (i+1)).value != null){
+                BusFinancials[i] = document.getElementById("BusFinPer"+ (i+1)).value;
+            }
+            else{
+                BusFinancials[i] = "";
+            }
+        }
+    }
 
+    function saveBusinessFunnels(){
+        for (let i = 0; i < BusFunnels.length; i++){
+            if(document.getElementById("BusFunnel"+ (i+1)).value != null){
+                BusFunnels[i] = document.getElementById("BusFunnel"+ (i+1)).value;
+            }
+            else{
+                BusFunnels[i] = "";
+            }
+        }
+    }
 
-    // will move to 3 parameters for other columns/rows using: revamount, margin, netprofit
-    function netProfitCalc(value1, value2, front, back)
+    function saveSummaries(){
+        for (let i = 0; i < Summaries.length; i++){
+            if(document.getElementById("SQA"+ (i+1)).value != null){
+                Summaries[i] = document.getElementById("SQA"+ (i+1)).value;
+            }
+            else{
+                Summaries[i] = "N/A";
+            }
+        }
+    }
+
+    function netProfitCalc(value1, value2, newvalue)
     { 
         const aramount = document.getElementById(value1).value;
         const pm = document.getElementById(value2).value;
         if(aramount != null && pm != null){
              const percent = pm / 100;
              const result = (aramount * percent).toFixed(2);
-            document.getElementById(front + back).value = result;
+            document.getElementById(newvalue).value = result;
         }
         
     }
 
-    function Customers(value1, value2, flag){
+    function Customers(value1, value2, newvalue){
         const leadsC = document.getElementById(value1).value;
         const convRate = document.getElementById(value2).value / 100;
         if (leadsC != null && convRate != null){
             const result = (leadsC * convRate).toFixed(2);
-            document.getElementById('Customer' + flag).value = result;  
+            document.getElementById(newvalue).value = result;  
         }
     }
-    function sync(text, front, back){
-     document.getElementById(front + back).value = text.value;
+    function sync(text, to, tosum){
+     document.getElementById(to).value = text.value;
+     document.getElementById(tosum).value = text.value;
     }
 
-    function multiply(value1, value2, front, back){
+    function multiply(value1, value2, newvalue){
         const part1 = document.getElementById(value1).value;
         const part2= document.getElementById(value2).value;
         if(part1 != null && part2 != null){
             const result = part1 * part2;
-            document.getElementById(front + back).value = result;
+            document.getElementById(newvalue).value = result;
         }
     }
     
-    function AddStuff(value1, value2, flag){
+    function AddStuff(value1, value2, newvalue){
         const add1 = parseInt(document.getElementById(value1).value);
         const add2 = parseInt(document.getElementById(value2).value);
         if(add1 != null && add2 != null){
             const result = (add1 + add2);
-            document.getElementById("TotalSaM" + flag).value = result;
+            document.getElementById(newvalue).value = result;
         }
     }
 
-    function CostAcq(value1, value2, flag, avrevPC){
+    function CostAcq(value1, value2, newvalue, avrevPC, finalresult){
         const div1 = parseInt(document.getElementById(value1).value);
         const div2 = parseInt(document.getElementById(value2).value);
         if(div1 != null && div2 != null){
             const result =  Math.ceil(div2 / div1);
-            document.getElementById("CostoAPC" + flag).value = result;
-            CostAcqPercent(result, avrevPC, flag);
+            document.getElementById(newvalue).value = result;
+            CostAcqPercent(result, newvalue, avrevPC, finalresult);
         }
         
     }
 
-    function CostAcqPercent(result, arPC, flag){
+    function CostAcqPercent(result, flag, arPC, final){
 
         const part2 = parseInt(document.getElementById(arPC).value);
         const resultPercent = ((result / part2) * 100).toFixed(2);
 
-        document.getElementById("CostoAPCpercent" + flag).value = resultPercent;
+        document.getElementById(final).value = resultPercent;
 
 
         

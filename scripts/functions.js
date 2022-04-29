@@ -1,5 +1,8 @@
 var selectionArray = new Array();
     selectionArray = [0,0,0,0,0,0,0,0,0,0,0,0]
+
+var quizArray = new Array();
+    quizArray = []
     //0 means excluded from template,1 means included
     //0 - Personal Alignment
     //1 - Personal Goals
@@ -420,5 +423,70 @@ var Summaries = Array.apply(null, Array(56)).map(function () {});
 
         
 
+    }
+
+
+    function ThoughtAssessLogicNext(nextQuestion,qA, qB, qC, qD)
+    {
+
+        var nexQ = document.getElementById(nextQuestion);
+        var questionA = document.getElementById(qA);
+        var questionB = document.getElementById(qB);
+        var questionC = document.getElementById(qC);
+        var questionD = document.getElementById(qD);
+
+
+        if(questionA.checked)
+        {
+            //console.log(questionA.value);
+            quizArray.push(Number(questionA.value));
+            document.location.href = "#"+ nextQuestion;
+
+        }
+        else if(questionB.checked)
+        {
+            //console.log("You selected B");
+            quizArray.push(Number(questionB.value));
+            document.location.href = "#"+ nextQuestion;
+        }
+        else if(questionC.checked)
+        {
+            //console.log("You selected C");
+            quizArray.push(Number(questionC.value));
+            document.location.href = "#"+ nextQuestion;
+        }
+        else if(questionD.checked)
+        {
+            //console.log("You selected D");
+            quizArray.push(Number(questionD.value));
+            document.location.href = "#"+ nextQuestion;
+        }
+        else
+        {
+            console.log("You've selected nothing!")
+            alert("Please answer the question before continuing")
+        }
+        console.log(quizArray);
+        
+        
+    }
+
+    function ThoughtAssessLogicPrev(qA, qB, qC, qD)
+    {
+
+        var questionA = document.getElementById(qA);
+        var questionB = document.getElementById(qB);
+        var questionC = document.getElementById(qC);
+        var questionD = document.getElementById(qD);
+        quizArray.pop();
+
+        console.log(quizArray);
+        
+    }
+
+    function AssessmentProfile(key)
+    {
+        var profileType = document.getElementById(key);
+        console.log(profileType.value);
     }
 

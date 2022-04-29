@@ -19,6 +19,7 @@
       <li><a href="#BusinessFinancialClient">BusinessFinancialClient</a></li>
       <li><a href="#BusinessFunnelPerformance">BusinessFunnelPerformanceClient</a></li>
       <li><a href="#SummaryandQuarterlyActions">SummaryandQuarterlyActions</a></li>
+      <li><a href="#thoughtQuizResults">Quiz Results</a></li>
 
     </ul>
   </nav>
@@ -1158,15 +1159,15 @@
         </div>
         <div class="questions">
             <form class="options" id="question1">
-                <input class="option" style="margin-left:50px" type="radio" name="question1" value=4>A. Unless there's really compelling evidence to convince me, I'll probably avoid it<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question1" value=3>B. I'll see if there's any similarities beteeen what I've known from before, and this new idea<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question1" value=1>C. I'm excited by ne ideas, regardless of whether they're within my area of knowledge<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question1" value=2>D. I'll ask my peers/colleagues/mentors/partners to seek advice and gain their opinion</br>
+                <input class="option" style="margin-left:50px" id = "q1a" type="radio" name="question1" value=4 >A. Unless there's really compelling evidence to convince me, I'll probably avoid it<br>
+                <input class="option" style="margin-left:50px" id = "q1b" type="radio" name="question1" value=3>B. I'll see if there's any similarities between what I've known from before, and this new idea<br>
+                <input class="option" style="margin-left:50px" id = "q1c" type="radio" name="question1" value=1>C. I'm excited by new ideas, regardless of whether they're within my area of knowledge<br>
+                <input class="option" style="margin-left:50px" id = "q1d" type="radio" name="question1" value=2>D. I'll ask my peers/colleagues/mentors/partners to seek advice and gain their opinion</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin-bottom:50px">
-                <button onclick="location.href='#q2';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>
+                <button onclick="ThoughtAssessLogicNext('q2', 'q1a', 'q1b', 'q1c', 'q1d')" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=nextbutton>Next</button>
                 <!--<button onclick="location.href = '#createSession3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:50px;margin-bottom:100px;margin-left:10px"type="button" id=createbutton>Next</button> -->
             </div>
         </div>
@@ -1188,18 +1189,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question2">
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=3>A. I can't recall<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=2>B. Faily often<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=4>C. I don't have assumptions<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=1>D. I regularly test whether my assumptions are valid</br>
+                <input class="option" style="margin-left:50px" id = "q2a" type="radio" name="question2" value=3>A. I can't recall<br>
+                <input class="option" style="margin-left:50px" id = "q2b" type="radio" name="question2" value=2>B. Fairly often<br>
+                <input class="option" style="margin-left:50px" id = "q2c" type="radio" name="question2" value=4>C. I don't have assumptions<br>
+                <input class="option" style="margin-left:50px" id = "q2d" type="radio" name="question2" value=1>D. I regularly test whether my assumptions are valid</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#thoughtClient';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q2a', 'q2b', 'q2c', 'q2d'), location.href='#thoughtClient'; " class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q3', 'q2a', 'q2b', 'q2c', 'q2d'); " class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1221,18 +1222,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question3">
-                <input class="option" style="margin-left:50px" type="radio" name="question3" value=4>A. All the time<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question3" value=1>B. I'm not distracted by much<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question3" value=2>C. It happens occasionally<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question3" value=3>D. I regularaly test whether my assumptions are valid</br>
+                <input class="option" style="margin-left:50px" id = "q3a" type="radio" name="question3" value=4>A. All the time<br>
+                <input class="option" style="margin-left:50px" id = "q3b" type="radio" name="question3" value=1>B. I'm not distracted by much<br>
+                <input class="option" style="margin-left:50px" id = "q3c" type="radio" name="question3" value=2>C. It happens occasionally<br>
+                <input class="option" style="margin-left:50px" id = "q3d" type="radio" name="question3" value=3>D. I regularly test whether my assumptions are valid</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q2';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q3a', 'q3b', 'q3c', 'q3d'), location.href='#q2';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q4', 'q3a', 'q3b', 'q3c', 'q3d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1254,18 +1255,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question4">
-                <input class="option" style="margin-left:50px" type="radio" name="question4" value=4>A. I need to be seen as being right<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question4" value=1>B. I see arguments more like conversations to gain deeper understanding<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question4" value=3>C. I try and avoid arguments as much as possible<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question4" value=2>D. It depends on the circumstance</br>
+                <input class="option" style="margin-left:50px" id = "q4a" type="radio" name="question4" value=4>A. I need to be seen as being right<br>
+                <input class="option" style="margin-left:50px" id = "q4b" type="radio" name="question4" value=1>B. I see arguments more like conversations to gain deeper understanding<br>
+                <input class="option" style="margin-left:50px" id = "q4c" type="radio" name="question4" value=3>C. I try and avoid arguments as much as possible<br>
+                <input class="option" style="margin-left:50px" id = "q4d" type="radio" name="question4" value=2>D. It depends on the circumstance</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q4a', 'q4b', 'q4c', 'q4d'), location.href='#q3';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q5';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q5', 'q4a', 'q4b', 'q4c', 'q4d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1287,18 +1288,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question5">
-                <input class="option" style="margin-left:50px" type="radio" name="question5" value=2>A. I just acted upon instinct<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question5" value=3>B. I naturally prioritise things without realising<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question5" value=4>C. I rely on what I've most recently thought<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question5" value=1>D. I don't prioritise information, I see all data as equally balanced and worthy</br>
+                <input class="option" style="margin-left:50px" id = "q5a" type="radio" name="question5" value=2>A. I just acted upon instinct<br>
+                <input class="option" style="margin-left:50px" id = "q5b" type="radio" name="question5" value=3>B. I naturally prioritise things without realising<br>
+                <input class="option" style="margin-left:50px" id = "q5c" type="radio" name="question5" value=4>C. I rely on what I've most recently thought<br>
+                <input class="option" style="margin-left:50px" id = "q5d"type="radio" name="question5" value=1>D. I don't prioritise information, I see all data as equally balanced and worthy</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q5a', 'q5b', 'q5c', 'q5d'), location.href='#q4';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q6';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q6', 'q5a', 'q5b', 'q5c', 'q5d')" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1320,18 +1321,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question6">
-                <input class="option" style="margin-left:50px" type="radio" name="question6" value=4>A. I crossmatch things I believe in, with evidence I can access<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question6" value=1>B. t distracted by much<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question6" value=2>C. It happens occasionally<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question6" value=3>D. I regularaly test whether my assumptions are valid</br>
+                <input class="option" style="margin-left:50px" id = "q6a" type="radio" name="question6" value=4>A. I crossmatch things I believe in, with evidence I can access<br>
+                <input class="option" style="margin-left:50px" id = "q6b" type="radio" name="question6" value=1>B. t distracted by much<br>
+                <input class="option" style="margin-left:50px" id = "q6c" type="radio" name="question6" value=2>C. It happens occasionally<br>
+                <input class="option" style="margin-left:50px" id = "q6d" type="radio" name="question6" value=3>D. I regularaly test whether my assumptions are valid</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q5';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q6a', 'q6b', 'q6c', 'q6d'), location.href='#q5';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q7';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q7', 'q6a', 'q6b', 'q6c', 'q6d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1353,18 +1354,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question7">
-                <input class="option" style="margin-left:50px" type="radio" name="question7" value=1>A. Not at all, I think totally independently<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question7" value=3>B. I'm guided by other people's actions a lot<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question7" value=2>C. Not very much but occasionally it happens<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question7" value=4>D. I think it's a good thing to be a followe rather than a leader in most cases</br>
+                <input class="option" style="margin-left:50px" id = "q7a" type="radio" name="question7" value=1>A. Not at all, I think totally independently<br>
+                <input class="option" style="margin-left:50px" id = "q7b" type="radio" name="question7" value=3>B. I'm guided by other people's actions a lot<br>
+                <input class="option" style="margin-left:50px" id = "q7c" type="radio" name="question7" value=2>C. Not very much but occasionally it happens<br>
+                <input class="option" style="margin-left:50px" id = "q7d" type="radio" name="question7" value=4>D. I think it's a good thing to be a followe rather than a leader in most cases</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q6';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q7a', 'q7b', 'q7c', 'q7d'), location.href='#q6';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q8';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q8', 'q7a', 'q7b', 'q7c', 'q7d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1386,18 +1387,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question8">
-                <input class="option" style="margin-left:50px" type="radio" name="question8" value=4>A. Highly rational - I take everything into account reasonably and esldom let my own pre-existing beliefs colour my decision-making<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question8" value=1>B. Quite rational - I try and be as balanced as possible<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question8" value=2>C. Not very rational, I already know what I need to know and don't need to consider other elements<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question8" value=3>D. I can be as rational as needed, depending on the circumstances</br>
+                <input class="option" style="margin-left:50px" id = "q8a" type="radio" name="question8" value=4>A. Highly rational - I take everything into account reasonably and esldom let my own pre-existing beliefs colour my decision-making<br>
+                <input class="option" style="margin-left:50px" id = "q8b" type="radio" name="question8" value=1>B. Quite rational - I try and be as balanced as possible<br>
+                <input class="option" style="margin-left:50px" id = "q8c" type="radio" name="question8" value=2>C. Not very rational, I already know what I need to know and don't need to consider other elements<br>
+                <input class="option" style="margin-left:50px" id = "q8d" type="radio" name="question8" value=3>D. I can be as rational as needed, depending on the circumstances</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q7';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q8a', 'q8b', 'q8c', 'q8d'), location.href='#q7';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q9';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q9', 'q8a', 'q8b', 'q8c', 'q8d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1418,18 +1419,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question9">
-                <input class="option" style="margin-left:50px" type="radio" name="question9" value=4>A. I can easily observe biases that other people have and they frustrate me<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question9" value=2>B. I'm fully aware of the biases I have, but others seem to not be so aware<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question9" value=1>C. I'm curious to understand my biases more, I think we all have them<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question9" value=3>D. I don't notice other people's biases</br>
+                <input class="option" style="margin-left:50px" id = "q9a" type="radio" name="question9" value=4>A. I can easily observe biases that other people have and they frustrate me<br>
+                <input class="option" style="margin-left:50px" id = "q9b" type="radio" name="question9" value=2>B. I'm fully aware of the biases I have, but others seem to not be so aware<br>
+                <input class="option" style="margin-left:50px" id = "q9c" type="radio" name="question9" value=1>C. I'm curious to understand my biases more, I think we all have them<br>
+                <input class="option" style="margin-left:50px" id = "q9d" type="radio" name="question9" value=3>D. I don't notice other people's biases</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q8';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q9a', 'q9b', 'q9c', 'q9d'), location.href='#q8';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q10';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q10', 'q9a', 'q9b', 'q9c', 'q9d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1450,18 +1451,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question10">
-                <input class="option" style="margin-left:50px" type="radio" name="question10" value=1>A. All the time - that's the way I make decisions<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question10" value=4>B. I don't need to challenge my preferences<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question10" value=2>C. I try and maintain a balance but could do more<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question10" value=3>D. I'd like to do this more but I'm not sure how</br>
+                <input class="option" style="margin-left:50px" id = "q10a" type="radio" name="question10" value=1>A. All the time - that's the way I make decisions<br>
+                <input class="option" style="margin-left:50px" id = "q10b" type="radio" name="question10" value=4>B. I don't need to challenge my preferences<br>
+                <input class="option" style="margin-left:50px" id = "q10c" type="radio" name="question10" value=2>C. I try and maintain a balance but could do more<br>
+                <input class="option" style="margin-left:50px" id = "q10d" type="radio" name="question10" value=3>D. I'd like to do this more but I'm not sure how</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q9';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q10a', 'q10b', 'q10c', 'q10d'), location.href='#q9';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q11';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q11','q10a', 'q10b', 'q10c', 'q10d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1482,18 +1483,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question11">
-                <input class="option" style="margin-left:50px" type="radio" name="question11" value=4>A. Quite the opposite - I always prefer things that support choices I've already made<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question11" value=1>B. I always test what I think I prefer to ensure it's not a previous choice that's biasing me<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question11" value=2>C. When I am conscious of it, I try and maintain a rational process of decision making<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question11" value=3>D. I am aware I make decisions based on past choices but I'm not sure how to address it</br>
+                <input class="option" style="margin-left:50px" id = "q11a" type="radio" name="question11" value=4>A. Quite the opposite - I always prefer things that support choices I've already made<br>
+                <input class="option" style="margin-left:50px" id = "q11b" type="radio" name="question11" value=1>B. I always test what I think I prefer to ensure it's not a previous choice that's biasing me<br>
+                <input class="option" style="margin-left:50px" id = "q11c" type="radio" name="question11" value=2>C. When I am conscious of it, I try and maintain a rational process of decision making<br>
+                <input class="option" style="margin-left:50px" id = "q11d" type="radio" name="question11" value=3>D. I am aware I make decisions based on past choices but I'm not sure how to address it</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q10';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q11a', 'q11b', 'q11c', 'q11d'), location.href='#q10';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q12';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q12','q11a', 'q11b', 'q11c', 'q11d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1514,18 +1515,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question12">
-                <input class="option" style="margin-left:50px" type="radio" name="question12" value=3>A. Never - I don't consider conflict (or the avoidance of it) when making decisions<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question12" value=2>B. Sometimes - it depends on what we're trying to achieve<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question12" value=4>C. Often - I think conflict within a group of people should be avoided at all costs - even at the expense of progress<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question12" value=1>D. Conflict isn't productive but if it's at the cost of progress then so be it</br>
+                <input class="option" style="margin-left:50px" id = "q12a" type="radio" name="question12" value=3>A. Never - I don't consider conflict (or the avoidance of it) when making decisions<br>
+                <input class="option" style="margin-left:50px" id = "q12b" type="radio" name="question12" value=2>B. Sometimes - it depends on what we're trying to achieve<br>
+                <input class="option" style="margin-left:50px" id = "q12c" type="radio" name="question12" value=4>C. Often - I think conflict within a group of people should be avoided at all costs - even at the expense of progress<br>
+                <input class="option" style="margin-left:50px" id = "q12d" type="radio" name="question12" value=1>D. Conflict isn't productive but if it's at the cost of progress then so be it</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q11';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q12a', 'q12b', 'q12c', 'q12d'), location.href='#q11';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q13';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q13','q12a', 'q12b', 'q12c', 'q12d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1546,18 +1547,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question13">
-                <input class="option" style="margin-left:50px" type="radio" name="question13" value=3>A. I've never considered this to be something to investigate<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question13" value=4>B. I often see correlation between the past, present and future - I don't need to investigate it much<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question13" value=2>C. I often see correlation between the past, present and future - but I investigate that correlation to ensure it's accurate<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question13" value=1>D. I don't see very much correlation between the past, present and future</br>
+                <input class="option" style="margin-left:50px" id = "q13a" type="radio" name="question13" value=3>A. I've never considered this to be something to investigate<br>
+                <input class="option" style="margin-left:50px" id = "q13b" type="radio" name="question13" value=4>B. I often see correlation between the past, present and future - I don't need to investigate it much<br>
+                <input class="option" style="margin-left:50px" id = "q13c" type="radio" name="question13" value=2>C. I often see correlation between the past, present and future - but I investigate that correlation to ensure it's accurate<br>
+                <input class="option" style="margin-left:50px" id = "q13d" type="radio" name="question13" value=1>D. I don't see very much correlation between the past, present and future</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q12';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q13a', 'q13b', 'q13c', 'q13d'), location.href='#q12';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q14';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q14','q13a', 'q13b', 'q13c', 'q13d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1578,18 +1579,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question14">
-                <input class="option" style="margin-left:50px" type="radio" name="question14" value=4>A. I'd probably go for the smaller reward now rather than wait - who knows what could happen in the meantime?<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question14" value=1>B. I tend to wait for the larger reward - It's almost always worth it<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question14" value=2>C. The larger and later reward would have to be massive for me to wait - So unless that's the case, I'll take what I can now<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question14" value=3>D. It totally depends - I don't have one particular view on this unless I know the exact vaue of both rewards</br>
+                <input class="option" style="margin-left:50px" id = "q14a" type="radio" name="question14" value=4>A. I'd probably go for the smaller reward now rather than wait - who knows what could happen in the meantime?<br>
+                <input class="option" style="margin-left:50px" id = "q14b" type="radio" name="question14" value=1>B. I tend to wait for the larger reward - It's almost always worth it<br>
+                <input class="option" style="margin-left:50px" id = "q14c" type="radio" name="question14" value=2>C. The larger and later reward would have to be massive for me to wait - So unless that's the case, I'll take what I can now<br>
+                <input class="option" style="margin-left:50px" id = "q14d" type="radio" name="question14" value=3>D. It totally depends - I don't have one particular view on this unless I know the exact vaue of both rewards</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q13';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q14a', 'q14b', 'q14c', 'q14d'), location.href='#q13';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q15';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q15','q14a', 'q14b', 'q14c', 'q14d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1610,18 +1611,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question15">
-                <input class="option" style="margin-left:50px" type="radio" name="question15" value=1>A. Always - I'm skeptical of correlation until I can prove it's definitely there<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question15" value=2>B. Sometimes - I try and ensure a rational view of things that appear correlated<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question15" value=4>C. Never - if I've spotted a correlation then there tends to genuinely be one - I don't need to test it<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question15" value=3>D. It's never occurred to me that things that seem correlated may not be</br>
+                <input class="option" style="margin-left:50px" id = "q15a" type="radio" name="question15" value=1>A. Always - I'm skeptical of correlation until I can prove it's definitely there<br>
+                <input class="option" style="margin-left:50px" id = "q15b" type="radio" name="question15" value=2>B. Sometimes - I try and ensure a rational view of things that appear correlated<br>
+                <input class="option" style="margin-left:50px" id = "q15c" type="radio" name="question15" value=4>C. Never - if I've spotted a correlation then there tends to genuinely be one - I don't need to test it<br>
+                <input class="option" style="margin-left:50px" id = "q15d" type="radio" name="question15" value=3>D. It's never occurred to me that things that seem correlated may not be</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q14';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q15a', 'q15b', 'q15c', 'q15d'), location.href='#q14';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q16';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q16','q15a', 'q15b', 'q15c', 'q15d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1642,18 +1643,18 @@
         </div>
         <div class="questions">
             <form class="options"id="question16">
-                <input class="option" style="margin-left:50px" type="radio" name="question16" value=1>A. I can stop investing more money/time/energy instantly as soon as I realize the outcome is becoming more negative<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question16" value=3>B. It's tough to break the cycle as I feel committed to continuing down the path that's been agreed to<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question16" value=2>C. I try and maintain a balanced view but tend to keep going a bit longer than I should<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question16" value=4>D. Ido this quite often - it's something I'm aware of</br>
+                <input class="option" style="margin-left:50px" id = "q16a" type="radio" name="question16" value=1>A. I can stop investing more money/time/energy instantly as soon as I realize the outcome is becoming more negative<br>
+                <input class="option" style="margin-left:50px" id = "q16b" type="radio" name="question16" value=3>B. It's tough to break the cycle as I feel committed to continuing down the path that's been agreed to<br>
+                <input class="option" style="margin-left:50px" id = "q16c" type="radio" name="question16" value=2>C. I try and maintain a balanced view but tend to keep going a bit longer than I should<br>
+                <input class="option" style="margin-left:50px" id = "q16d" type="radio" name="question16" value=4>D. Ido this quite often - it's something I'm aware of</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q15';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q16a', 'q16b', 'q16c', 'q16d'), location.href='#q15';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q17';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q17','q16a', 'q16b', 'q16c', 'q16d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1674,18 +1675,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question17">
-                <input class="option" style="margin-left:50px" type="radio" name="question17" value=4>A. None - my preferences are unlinked to what I find familiar<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question17" value=2>B. A huge amount - I create my preferences based on what I find most familiar<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question17" value=3>C. Not a huge influence because I'm continually curious to explore ne things to widen my preferences<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question17" value=1>D. I'm curious to discover more things in life but I tend to revert back to what I find familiar</br>
+                <input class="option" style="margin-left:50px" id = "q17a" type="radio" name="question17" value=4>A. None - my preferences are unlinked to what I find familiar<br>
+                <input class="option" style="margin-left:50px" id = "q17b" type="radio" name="question17" value=2>B. A huge amount - I create my preferences based on what I find most familiar<br>
+                <input class="option" style="margin-left:50px" id = "q17c" type="radio" name="question17" value=3>C. Not a huge influence because I'm continually curious to explore ne things to widen my preferences<br>
+                <input class="option" style="margin-left:50px" id = "q17d" type="radio" name="question17" value=1>D. I'm curious to discover more things in life but I tend to revert back to what I find familiar</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q16';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q17a', 'q17b', 'q17c', 'q17d'), location.href='#q16';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q18';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q18','q17a', 'q17b', 'q17c', 'q17d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1706,18 +1707,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question18">
-                <input class="option" style="margin-left:50px" type="radio" name="question18" value=1>A. I weigh everything up, I seek out information that I may not have known, and finally make a decision on the level of probability<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question18" value=4>B. I tend to instinctively sense what the likelihood<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question18" value=2>C. I try and be as fully informed as possible<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question18" value=3>D. I don't have a particular approach</br>
+                <input class="option" style="margin-left:50px" id = "q18a" type="radio" name="question18" value=1>A. I weigh everything up, I seek out information that I may not have known, and finally make a decision on the level of probability<br>
+                <input class="option" style="margin-left:50px" id = "q18b" type="radio" name="question18" value=4>B. I tend to instinctively sense what the likelihood<br>
+                <input class="option" style="margin-left:50px" id = "q18c" type="radio" name="question18" value=2>C. I try and be as fully informed as possible<br>
+                <input class="option" style="margin-left:50px" id = "q18d" type="radio" name="question18" value=3>D. I don't have a particular approach</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q17';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q18a', 'q18b', 'q18c', 'q18d'), location.href='#q17';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q19';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q19','q18a', 'q18b', 'q18c', 'q18d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1738,18 +1739,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question19">
-                <input class="option" style="margin-left:50px" type="radio" name="question19" value=1>A. I spend a lot of time planning for what could go wrong<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question19" value=3>B. I tend to go with the flow and take things as they come<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question19" value=2>C. I always have a backup plan so even if things go wrong, I feel I'm pretty covered<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question19" value=4>D. I don't see the need to prepare for "worst-case" scenarios</br>
+                <input class="option" style="margin-left:50px" id = "q19a" type="radio" name="question19" value=1>A. I spend a lot of time planning for what could go wrong<br>
+                <input class="option" style="margin-left:50px" id = "q19b" type="radio" name="question19" value=3>B. I tend to go with the flow and take things as they come<br>
+                <input class="option" style="margin-left:50px" id = "q19c" type="radio" name="question19" value=2>C. I always have a backup plan so even if things go wrong, I feel I'm pretty covered<br>
+                <input class="option" style="margin-left:50px" id = "q19d" type="radio" name="question19" value=4>D. I don't see the need to prepare for "worst-case" scenarios</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q18';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q19a', 'q19b', 'q19c', 'q19d'), location.href='#q18';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q20';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q20','q19a', 'q19b', 'q19c', 'q19d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1770,18 +1771,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question20">
-                <input class="option" style="margin-left:50px" type="radio" name="question20" value=4>A. I would continue developing something myself, I'd prefer it that way<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question20" value=2>B. I don've have a preference as to who develops what, I'm more interested in the overall outcome<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question20" value=3>C. My competitive advantage is based on ownership so I'd prefer to develop things in-house<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question20" value=1>D. I would prefer someone else to develop something I can then use, it's better that way</br>
+                <input class="option" style="margin-left:50px" id = "q20a" type="radio" name="question20" value=4>A. I would continue developing something myself, I'd prefer it that way<br>
+                <input class="option" style="margin-left:50px" id = "q20b" type="radio" name="question20" value=2>B. I don've have a preference as to who develops what, I'm more interested in the overall outcome<br>
+                <input class="option" style="margin-left:50px" id = "q20c" type="radio" name="question20" value=3>C. My competitive advantage is based on ownership so I'd prefer to develop things in-house<br>
+                <input class="option" style="margin-left:50px" id = "q20d" type="radio" name="question20" value=1>D. I would prefer someone else to develop something I can then use, it's better that way</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q19';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q20a', 'q20b', 'q20c', 'q20d'), location.href='#q19';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q21';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q21', 'q20a', 'q20b', 'q20c', 'q20d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1802,18 +1803,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question21">
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=2>A. I don't have any influence on others when I ask questions of them and I view responses agnostically<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=1>B. I'm aware that how I ask questions may lead people into responding a certain way so I take that into account when I consider their responses<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=3>C. I've never considered this before<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question2" value=4>D. I'm aware of this happening and it's actually a useful way of getting the right information</br>
+                <input class="option" style="margin-left:50px" id = "q21a" type="radio" name="question2" value=2>A. I don't have any influence on others when I ask questions of them and I view responses agnostically<br>
+                <input class="option" style="margin-left:50px" id = "q21b" type="radio" name="question2" value=1>B. I'm aware that how I ask questions may lead people into responding a certain way so I take that into account when I consider their responses<br>
+                <input class="option" style="margin-left:50px" id = "q21c" type="radio" name="question2" value=3>C. I've never considered this before<br>
+                <input class="option" style="margin-left:50px" id = "q21d" type="radio" name="question2" value=4>D. I'm aware of this happening and it's actually a useful way of getting the right information</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q20';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q21a', 'q21b', 'q21c', 'q21d'), location.href='#q20';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q22';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q22', 'q21a', 'q21b', 'q21c', 'q21d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1834,18 +1835,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question22">
-                <input class="option" style="margin-left:50px" type="radio" name="question22" value=4>A. I'm pretty fortunate so I think it's fairly unlikely<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question22" value=1>B. Life is often a challenge so I think there's a fair chance of experiencing a negative event at any stage<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question22" value=3>C. I try to stay positive and assume the best will happen<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question22" value=2>D. I don't mind what the chances are becuase it's more about how I choose to respond to what happens</br>
+                <input class="option" style="margin-left:50px" id = "q22a" type="radio" name="question22" value=4>A. I'm pretty fortunate so I think it's fairly unlikely<br>
+                <input class="option" style="margin-left:50px" id = "q22b" type="radio" name="question22" value=1>B. Life is often a challenge so I think there's a fair chance of experiencing a negative event at any stage<br>
+                <input class="option" style="margin-left:50px" id = "q22c" type="radio" name="question22" value=3>C. I try to stay positive and assume the best will happen<br>
+                <input class="option" style="margin-left:50px" id = "q22d" type="radio" name="question22" value=2>D. I don't mind what the chances are becuase it's more about how I choose to respond to what happens</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q21';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q22a', 'q22b', 'q22c', 'q22d'), location.href='#q21';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q23';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q23', 'q22a', 'q22b', 'q22c', 'q22d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1866,18 +1867,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question23">
-                <input class="option" style="margin-left:50px" type="radio" name="question23" value=1>A. I want (and provide) 100% honesty and transparency, regardless of whether it's good or bad<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question23" value=3>B. There are certain times when total honesty and transparency could cause bad outcomes so it varies<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question23" value=2>C. It depends on the level of importance - You can't be totally honest and transparent the whole time<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question23" value=4>D. I don't believe that 100% honesty and transparency is a good thing</br>
+                <input class="option" style="margin-left:50px" id = "q23a" type="radio" name="question23" value=1>A. I want (and provide) 100% honesty and transparency, regardless of whether it's good or bad<br>
+                <input class="option" style="margin-left:50px" id = "q23b" type="radio" name="question23" value=3>B. There are certain times when total honesty and transparency could cause bad outcomes so it varies<br>
+                <input class="option" style="margin-left:50px" id = "q23c" type="radio" name="question23" value=2>C. It depends on the level of importance - You can't be totally honest and transparent the whole time<br>
+                <input class="option" style="margin-left:50px" id = "q23d" type="radio" name="question23" value=4>D. I don't believe that 100% honesty and transparency is a good thing</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q22';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q23a', 'q23b', 'q23c', 'q23d'), location.href='#q22';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q24';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q24', 'q23a', 'q23b', 'q23c', 'q23d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1898,18 +1899,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question24">
-                <input class="option" style="margin-left:50px" type="radio" name="question24" value=2>A. When I'm certain about things I tend to check my certainty with other people<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question24" value=4>B. I'm ertain about some things and I know them to be true<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question24" value=3>C. I'm certain about a lot of things as I have experienced and observed a lot of things in my life<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question24" value=1>D. I'm not certain about anything</br>
+                <input class="option" style="margin-left:50px" id = "q24a" type="radio" name="question24" value=2>A. When I'm certain about things I tend to check my certainty with other people<br>
+                <input class="option" style="margin-left:50px" id = "q24b" type="radio" name="question24" value=4>B. I'm ertain about some things and I know them to be true<br>
+                <input class="option" style="margin-left:50px" id = "q24c" type="radio" name="question24" value=3>C. I'm certain about a lot of things as I have experienced and observed a lot of things in my life<br>
+                <input class="option" style="margin-left:50px" id = "q24d" type="radio" name="question24" value=1>D. I'm not certain about anything</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q23';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q24a', 'q24b', 'q24c', 'q24d'), location.href='#q23';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q25';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q25', 'q24a', 'q24b', 'q24c', 'q24d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1930,18 +1931,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question25">
-                <input class="option" style="margin-left:50px" type="radio" name="question25" value=2>A. I'd refer to seek an answer that's more interesting but I'll accept whatever the answer is<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question25" value=1>B. I don't mind what the answer is provided that it's the best one possible<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question25" value=3>C. I tend to focus on answers that are more striking and unusual<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question25" value=4>D. I disregard answers that don't excite me in some way</br>
+                <input class="option" style="margin-left:50px" id = "q25a" type="radio" name="question25" value=2>A. I'd refer to seek an answer that's more interesting but I'll accept whatever the answer is<br>
+                <input class="option" style="margin-left:50px" id = "q25b" type="radio" name="question25" value=1>B. I don't mind what the answer is provided that it's the best one possible<br>
+                <input class="option" style="margin-left:50px" id = "q25c" type="radio" name="question25" value=3>C. I tend to focus on answers that are more striking and unusual<br>
+                <input class="option" style="margin-left:50px" id = "q25d" type="radio" name="question25" value=4>D. I disregard answers that don't excite me in some way</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q24';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q25a', 'q25b', 'q25c', 'q25d'), location.href='#q24';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q26';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q26', 'q25a', 'q25b', 'q25c', 'q25d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1962,18 +1963,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question26">
-                <input class="option" style="margin-left:50px" type="radio" name="question26" value=4>A. I prefer to stick with that I know<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question26" value=2>B. I'm really curious about new approaches, even if they haven't been tested before<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question26" value=2>C. It depends on the concept. A low-risk concept is more likely to be tried than others<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question26" value=3>D. Ideally I'd like to try ne things but that isn't realistic in some cases</br>
+                <input class="option" style="margin-left:50px" id = "q26a" type="radio" name="question26" value=4>A. I prefer to stick with that I know<br>
+                <input class="option" style="margin-left:50px" id = "q26b" type="radio" name="question26" value=2>B. I'm really curious about new approaches, even if they haven't been tested before<br>
+                <input class="option" style="margin-left:50px" id = "q26c" type="radio" name="question26" value=2>C. It depends on the concept. A low-risk concept is more likely to be tried than others<br>
+                <input class="option" style="margin-left:50px" id = "q26d" type="radio" name="question26" value=3>D. Ideally I'd like to try ne things but that isn't realistic in some cases</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q25';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q26a', 'q26b', 'q26c', 'q26d'), location.href='#q25';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q27';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q27', 'q26a', 'q26b', 'q26c', 'q26d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -1994,18 +1995,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question27">
-                <input class="option" style="margin-left:50px" type="radio" name="question27" value=4>A. Yes - my views are mostly agreed with<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question27" value=3>B. Sometimes - it varies depending on the context<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question27" value=2>C. No - I tend to have opinions that most people don't <br>
-                <input class="option" style="margin-left:50px" type="radio" name="question27" value=1>D. I don't tend to think about whether people agree with me or not</br>
+                <input class="option" style="margin-left:50px" id = "q27a" type="radio" name="question27" value=4>A. Yes - my views are mostly agreed with<br>
+                <input class="option" style="margin-left:50px" id = "q27b" type="radio" name="question27" value=3>B. Sometimes - it varies depending on the context<br>
+                <input class="option" style="margin-left:50px" id = "q27c" type="radio" name="question27" value=2>C. No - I tend to have opinions that most people don't <br>
+                <input class="option" style="margin-left:50px" id = "q27d" type="radio" name="question27" value=1>D. I don't tend to think about whether people agree with me or not</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q26';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q27a', 'q27b', 'q27c', 'q27d'), location.href='#q26';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q28';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q28', 'q27a', 'q27b', 'q27c', 'q27d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -2026,18 +2027,18 @@
         </div>
         <div class="questions">
             <form class="options" id="question28">
-                <input class="option" style="margin-left:50px" type="radio" name="question28" value=4>A. Absolutely, if they endorse it it's likely to be good<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question28" value=1>B. It makes no difference to me, I'll make my decision based purely on the quality of what's being promoted<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question28" value=3>C. Not often but I'd probably pay more attention to the product or service than I usually would<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question28" value=2>D. I'm against all kinds of marketing so it'd actually be a turn-off</br>
+                <input class="option" style="margin-left:50px" id = "q28a" type="radio" name="question28" value=4>A. Absolutely, if they endorse it it's likely to be good<br>
+                <input class="option" style="margin-left:50px" id = "q28b" type="radio" name="question28" value=1>B. It makes no difference to me, I'll make my decision based purely on the quality of what's being promoted<br>
+                <input class="option" style="margin-left:50px" id = "q28c" type="radio" name="question28" value=3>C. Not often but I'd probably pay more attention to the product or service than I usually would<br>
+                <input class="option" style="margin-left:50px" id = "q28d" type="radio" name="question28" value=2>D. I'm against all kinds of marketing so it'd actually be a turn-off</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q27';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q28a', 'q28b', 'q28c', 'q28d'), location.href='#q27';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#q29';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
+                <button onclick="ThoughtAssessLogicNext('q29', 'q28a', 'q28b', 'q28c', 'q28d');" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Next</button>            
             </div>
         </div> 
   </section>
@@ -2058,22 +2059,43 @@
         </div>
         <div class="questions">
             <form class="options" id="question29">
-                <input class="option" style="margin-left:50px" type="radio" name="question29" value=4>A. When things go wrong, they tend to be because of factors outside my control<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question29" value=3>B. When things go right, they tend to be because I've enabled them to happen<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question29" value=1>C. Mostly good and bad things tend to be caused by how I've thought or behaved<br>
-                <input class="option" style="margin-left:50px" type="radio" name="question29" value=2>D. I don't monitor who is responsible for good and bad things happening</br>
+                <input class="option" style="margin-left:50px" id = "q29a" type="radio" name="question29" value=4>A. When things go wrong, they tend to be because of factors outside my control<br>
+                <input class="option" style="margin-left:50px" id = "q29b" type="radio" name="question29" value=3>B. When things go right, they tend to be because I've enabled them to happen<br>
+                <input class="option" style="margin-left:50px" id = "q29c" type="radio" name="question29" value=1>C. Mostly good and bad things tend to be caused by how I've thought or behaved<br>
+                <input class="option" style="margin-left:50px" id = "q29d" type="radio" name="question29" value=2>D. I don't monitor who is responsible for good and bad things happening</br>
             </form>
         </div>
         <div class="d-flex justify-content-center" style=margin-left:100px;margin-right:100px;margin-top:0px;>
             <div class="d-flex justify-content-center"style="margin:auto">
-                <button onclick="location.href='#q28';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
+                <button onclick="ThoughtAssessLogicPrev('q29a', 'q29b', 'q29c', 'q29d'), location.href='#q28';" class="btn btn-lg btn-outline-primary btn-block" style="margin-top:20px;margin-bottom:100px;margin-right:10px"type="button" id=createbutton>Back</button>
             </div>
             <div>
-                <button onclick="location.href='#qFinal';" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Complete Quiz</button>            
+                <button onclick="ThoughtAssessLogicNext('thoughtQuizResults', 'q29a', 'q29b', 'q29c', 'q29d') ;" class="btn btn-lg btn-outline-primary btn-block" style="margin-left:800px; margin-top: 20px;"type="button" id=createbutton>Get Results</button>            
             </div>
         </div> 
   </section>
-
+  <section id="thoughtQuizResults">
+    <div class="simplepagebox" >
+        <div class="d-flex justify-content-center" >
+            <div class=row style=background:#3c9bf9;border-radius:4px;width:700px;margin-top:25px >
+                <div class="d-flex justify-content-center" >
+                    <h4 style="margin-top:25px;" class="text-white" >Quiz Results</h4>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="d-flex justify-content-center" style="margin-top:25px; margin-right: 570px;">
+            <select name="profiles" id="profiles" onchange="AssessmentProfile('profiles')">
+                <option value="intro">Select to know more</option>
+                <option value="certain">The Certain</option>
+                <option value="gambler">The Gambler</option>
+                <option value="influenced">The Influenced</option>
+                <option value="inward">The Inward</option>
+            </select>
+        </div>
+  </section>
   
 
 

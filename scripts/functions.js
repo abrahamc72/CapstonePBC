@@ -324,106 +324,71 @@ var PATicks = [0,0,0,0,0,0]
 
 
     // will move to 3 parameters for other columns/rows using: revamount, margin, netprofit
-    function netProfitCalc(value1, value2, flag)
-    {
-        
-        var aramount = document.getElementById(value1).value;
-        var pm = document.getElementById(value2).value;
+    function netProfitCalc(value1, value2, front, back)
+    { 
+        const aramount = document.getElementById(value1).value;
+        const pm = document.getElementById(value2).value;
         if(aramount != null && pm != null){
-             var percent = pm / 100;
-             var result = aramount * percent;
-             if(flag == 0){
-                document.getElementById("NPnum").value = result;
-             }
-             else if(flag == 1){
-                document.getElementById("NetPC").value = result;
-             }
-             else if(flag == 2){
-                document.getElementById("NetPi").value = result;
-             }
-             
+             const percent = pm / 100;
+             const result = (aramount * percent).toFixed(2);
+            document.getElementById(front + back).value = result;
         }
         
     }
 
     function Customers(value1, value2, flag){
-        var leadsC = document.getElementById(value1).value;
-        var convRate = document.getElementById(value2).value / 100;
+        const leadsC = document.getElementById(value1).value;
+        const convRate = document.getElementById(value2).value / 100;
         if (leadsC != null && convRate != null){
-            var result = leadsC * convRate;
-            if(flag == 0){
-                document.getElementById("CustomerC").value = result;
-            }
-            if(flag == 1){
-                document.getElementById("Customeri").value = result;
-            }
-            
+            const result = (leadsC * convRate).toFixed(2);
+            document.getElementById('Customer' + flag).value = result;  
         }
     }
-    function sync(text){
-        document.getElementById("ARPCC").value = text.value;
+    function sync(text, front, back){
+     document.getElementById(front + back).value = text.value;
     }
 
-    // function works when "ARPC" is changed, not "ARPCC"
-    function newRevC(value1, value2, flag){
-        var cust = document.getElementById(value1).value;
-        var revPCust= document.getElementById(value2).value;
-        var result = cust * revPCust;
-        if(flag == 0){
-            document.getElementById("NewRC").value = result;
-        }
-        else if(flag == 1){
-            document.getElementById("NewRi").value = result;
-        }
-    }
-
-    function TotalSalesCost(value1, value2, flag){
-        var costPerson = document.getElementById(value1).value;
-        var numberPerson = document.getElementById(value2).value;
-        var result = costPerson * numberPerson;
-        if(flag == 0){
-            document.getElementById("TotalSCC").value = result;
-        }
-        else if(flag == 1){
-            document.getElementById("TotalSCi").value = result;
+    function multiply(value1, value2, front, back){
+        const part1 = document.getElementById(value1).value;
+        const part2= document.getElementById(value2).value;
+        if(part1 != null && part2 != null){
+            const result = part1 * part2;
+            document.getElementById(front + back).value = result;
         }
     }
     
     function AddStuff(value1, value2, flag){
-        var add1 = document.getElementById(value1).value;
-        var add2 = document.getElementById(value2).value;
-        result = add1 + add2;
-        if(flag == 0){
-            document.getElementById("TotalSaMC").value = result;
-        }
-        else if(flag == 1){
-            document.getElementById("TotalSaMi").value = result;
+        const add1 = parseInt(document.getElementById(value1).value);
+        const add2 = parseInt(document.getElementById(value2).value);
+        if(add1 != null && add2 != null){
+            const result = (add1 + add2);
+            document.getElementById("TotalSaM" + flag).value = result;
         }
     }
 
-    function CostAcq(value1, value2, flag){
-        var div1 = document.getElementById(value1).value;
-        var div2 = document.getElementById(value2).value;
-        result = div2 / div1;
-        if(flag == 0){
-            document.getElementById("CostoAPCC").value = result;
+    function CostAcq(value1, value2, flag, avrevPC){
+        const div1 = parseInt(document.getElementById(value1).value);
+        const div2 = parseInt(document.getElementById(value2).value);
+        if(div1 != null && div2 != null){
+            const result =  Math.ceil(div2 / div1);
+            document.getElementById("CostoAPC" + flag).value = result;
+            CostAcqPercent(result, avrevPC, flag);
         }
-        else if(flag == 1){
-            document.getElementById("CostoAPCi").value = result;
-        }
+        
     }
 
-    function CostAcqPercent(value1, value2, flag){
-        var part1 = document.getElementById(value1).value;
-        var part2 = document.getElementById(value2).value;
-        result = (part1 / part2) * 100 + "%";
-        if(flag == 0){
-            document.getElementById("CostoAPCpercentC").value = result;
-        }
-        else if(flag == 1){
-            document.getElementById("CostoAPCpercenti").value = result;
-        }
+    function CostAcqPercent(result, arPC, flag){
+
+        const part2 = parseInt(document.getElementById(arPC).value);
+        const resultPercent = ((result / part2) * 100).toFixed(2);
+
+        document.getElementById("CostoAPCpercent" + flag).value = resultPercent;
+
+
+        
+
     }
+
 
     function ThoughtAssessLogicNext(nextQuestion,qA, qB, qC, qD)
     {
@@ -479,33 +444,6 @@ var PATicks = [0,0,0,0,0,0]
         var questionD = document.getElementById(qD);
         quizArray.pop();
 
-        // if(questionA.checked)
-        // {
-        //     quizArray.pop();
-        //     //console.log(quizArray);
-        // }
-        // else if(questionB.checked)
-        // {
-        //     //console.log("You selected B");
-        //     quizArray.pop();
-        //     //console.log(quizArray);
-        // }
-        // else if(questionC.checked)
-        // {
-        //     //console.log("You selected C");
-        //     quizArray.pop();
-        //     //console.log(quizArray);
-        // }
-        // else if(questionD.checked)
-        // {
-        //     //console.log("You selected D");
-        //     quizArray.pop();
-        //     //console.log(quizArray);
-        // }
-        // else
-        // {
-        //     console.log("You've popped nothing!")
-        // }
         console.log(quizArray);
         
     }
@@ -515,4 +453,4 @@ var PATicks = [0,0,0,0,0,0]
         var profileType = document.getElementById(key);
         console.log(profileType.value);
     }
-   
+

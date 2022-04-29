@@ -11,7 +11,10 @@ How to use:
 	7.Clicking the small link on top should reset the app, also visiting http://localhost:8080 should do the same.  
 
 
-Inside of app.js theres is a PostgreSQL database key. The database is free hosted by elephantsql.com
+Inside of app.js theres is a PostgreSQL database key. The database is free and hosted by elephantsql.com
+Additionally there is a throwaway email used for the nodemailer function.
+
+If hosting the node.js server remotely replace all URLs in functions.js
 
 PostgreSQL tables
 
